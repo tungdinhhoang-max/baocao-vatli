@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Báo cáo Vật lí 11B — Tháng 8/2026</title>
+<style>
+:root{
+  --navy:#152a4e; --navy2:#22406e; --navy3:#3a628f;
+  --xanh:#0f7b52; --xanh-nen:#e6f4ed;
+  --ho:#9a6400;  --ho-nen:#fdf3dc;
+  --do:#a8253c;  --do-nen:#fdeaee;
+  --lam:#1668b3; --lam-nen:#e8f2fb;
+  --chu:#16202e; --chu2:#5a6b80; --chu3:#8d9bad;
+  --vien:#e3e9f0; --nen:#f4f6fa; --trang:#fff;
+  --bo:14px; --bo-nho:9px;
+  --do-bong:0 1px 2px rgba(21,42,78,.06),0 4px 14px rgba(21,42,78,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif;
+ background:var(--nen);color:var(--chu);line-height:1.55;padding:18px;
+ font-size:15px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto}
+
+/* ---------- DAU TRANG ---------- */
+.hd{background:linear-gradient(135deg,var(--navy),var(--navy2) 62%,var(--navy3));
+ color:#fff;border-radius:var(--bo);padding:24px 26px;margin-bottom:14px;
+ box-shadow:0 6px 22px rgba(21,42,78,.2);position:relative;overflow:hidden}
+.hd::after{content:"";position:absolute;right:-46px;top:-46px;width:190px;height:190px;
+ border-radius:50%;background:rgba(255,255,255,.055)}
+.hd .eb{font-size:11px;letter-spacing:2.6px;opacity:.8;text-transform:uppercase;
+ font-weight:600}
+.hd h1{font-size:26px;margin:7px 0 5px;font-weight:700;letter-spacing:-.3px;line-height:1.25}
+.hd .sub{font-size:13.5px;opacity:.93}
+.hd .sub b{font-weight:600}
+
+/* ---------- DAI CHON THANG ---------- */
+.thangs{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:14px}
+.thangs .nh{font-size:12px;color:var(--chu2);font-weight:600;margin-right:3px}
+.thangs a{text-decoration:none;font-size:13px;font-weight:600;padding:7px 15px;
+ border-radius:22px;border:1px solid var(--vien);color:var(--navy);background:var(--trang);
+ transition:.15s}
+.thangs a.on{background:var(--navy);color:#fff;border-color:var(--navy);
+ box-shadow:0 2px 8px rgba(21,42,78,.22)}
+.thangs a:hover{border-color:var(--navy3)}
+
+/* ---------- THE ---------- */
+.card{background:var(--trang);border-radius:var(--bo);padding:20px;
+ margin-bottom:14px;box-shadow:var(--do-bong);border:1px solid var(--vien)}
+.card h2{font-size:15px;color:var(--navy);margin-bottom:15px;font-weight:700;
+ display:flex;align-items:center;gap:8px;letter-spacing:-.1px}
+.card h2 .ico{font-size:16px}
+
+/* ---------- O SO LIEU (KPI) ---------- */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(138px,1fr));
+ gap:11px;margin-bottom:14px}
+.kpi{background:var(--trang);border-radius:var(--bo-nho);padding:15px 16px;
+ box-shadow:var(--do-bong);border:1px solid var(--vien);border-top:3px solid var(--navy2)}
+.kpi .l{font-size:10.5px;color:var(--chu2);text-transform:uppercase;
+ letter-spacing:.7px;font-weight:700}
+.kpi .v{font-size:27px;font-weight:700;color:var(--navy);margin-top:4px;
+ letter-spacing:-.8px;line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi .n{font-size:11.5px;color:var(--chu3);margin-top:3px}
+
+/* ---------- HUY CHUONG / TOP ---------- */
+.top3{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px}
+.t3{border-radius:var(--bo-nho);padding:16px;text-align:center;border:1.5px solid;
+ background:var(--trang)}
+.t3.a1{background:linear-gradient(170deg,#fffdf2,#fff8dd);border-color:#e0b62c}
+.t3.a2{background:linear-gradient(170deg,#fbfcfd,#f0f3f7);border-color:#b3bdc9}
+.t3.a3{background:linear-gradient(170deg,#fffaf5,#fdefe2);border-color:#d09461}
+.t3 .m{font-size:29px;line-height:1}
+.t3 .n{font-weight:700;margin:6px 0 3px;font-size:14.5px;color:var(--navy)}
+.t3 .s{font-size:12px;color:var(--chu2);line-height:1.6}
+.t3 .s b{color:var(--navy);font-size:14px}
+
+/* ---------- BANG ---------- */
+.scroll{overflow-x:auto;border-radius:var(--bo-nho);border:1px solid var(--vien);
+ -webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{background:var(--navy2);color:#fff;padding:11px 8px;text-align:center;
+ font-weight:600;font-size:11.5px;letter-spacing:.3px;white-space:nowrap}
+th:nth-child(2){text-align:left}
+td{padding:9px 7px;border-bottom:1px solid var(--vien);text-align:center;
+ white-space:nowrap;font-variant-numeric:tabular-nums}
+th:nth-child(2),td:nth-child(2){text-align:left;font-weight:600;
+ min-width:172px;white-space:normal}
+th:nth-child(1),td:nth-child(1){width:52px}
+tbody tr:nth-child(even){background:#fafbfd}
+tbody tr:hover{background:var(--lam-nen)}
+tbody tr:last-child td{border-bottom:none}
+
+/* ---------- NHAN TRANG THAI ---------- */
+.tag{font-weight:700;border-radius:5px;padding:2.5px 8px;display:inline-block;
+ font-size:12.5px;white-space:nowrap}
+.tag.g{background:var(--xanh-nen);color:var(--xanh)}
+.tag.r{background:var(--do-nen);color:var(--do)}
+.tag.a{background:var(--ho-nen);color:var(--ho)}
+.tag.b{background:var(--lam-nen);color:var(--lam)}
+.muted{color:var(--chu3);font-style:italic}
+.xh{font-weight:700;color:var(--navy);font-size:14.5px}
+.ghi{font-size:11.5px;color:var(--chu3);font-weight:400;display:block;margin-top:1px}
+
+/* ---------- PHO DIEM ---------- */
+.pho{display:grid;grid-template-columns:158px 1fr 40px;gap:10px;align-items:center;
+ margin-bottom:8px;font-size:13px}
+.pho .nm{color:var(--chu2);font-weight:500}
+.pho b{text-align:right;font-variant-numeric:tabular-nums;color:var(--navy)}
+.bar{height:9px;background:#eef1f6;border-radius:5px;overflow:hidden}
+.bar>i{display:block;height:100%;border-radius:5px;
+ background:linear-gradient(90deg,var(--navy2),var(--navy3))}
+
+/* ---------- TEN BAM DUOC ---------- */
+.nx{cursor:pointer;color:var(--navy);border-bottom:1.5px dotted var(--navy3);
+ padding-bottom:1px}
+.nx:hover{color:var(--lam);border-color:var(--lam)}
+.hint{font-size:12.5px;color:var(--chu2);margin-bottom:12px;
+ background:var(--lam-nen);border-left:3px solid var(--lam);
+ padding:9px 13px;border-radius:0 7px 7px 0}
+
+/* ---------- GHI CHU ---------- */
+.note{background:var(--lam-nen);border-left:4px solid var(--navy2);
+ border-radius:0 var(--bo-nho) var(--bo-nho) 0;padding:13px 16px;font-size:13px;
+ color:var(--chu);line-height:1.7}
+.warn{background:var(--ho-nen);border-left:4px solid #d99a00;border-radius:0 7px 7px 0;
+ padding:11px 14px;margin-bottom:8px;font-size:13.5px}
+.legend{font-size:12px;color:var(--chu2);margin-top:13px;line-height:2}
+.legend code{background:var(--nen);padding:2.5px 8px;border-radius:5px;
+ font-family:inherit;font-weight:700;color:var(--navy);font-size:11.5px}
+.foot{text-align:center;color:var(--chu3);font-size:11.5px;margin-top:22px;
+ padding-top:15px;border-top:1px solid var(--vien);line-height:1.8}
+
+/* ---------- HOP THOAI HO SO ---------- */
+.ov{position:fixed;inset:0;background:rgba(11,22,40,.62);display:none;
+ align-items:flex-start;justify-content:center;padding:16px;z-index:99;
+ overflow-y:auto;backdrop-filter:blur(3px)}
+.ov.on{display:flex}
+.dlg{background:var(--trang);border-radius:var(--bo);max-width:600px;width:100%;
+ box-shadow:0 18px 55px rgba(0,0,0,.32);margin:0 auto;overflow:hidden;
+ max-height:calc(100vh - 32px);display:flex;flex-direction:column}
+.dlg .dh{flex-shrink:0}
+.dlg .noi{overflow-y:auto;-webkit-overflow-scrolling:touch}
+.dh{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;
+ padding:18px 22px;display:flex;justify-content:space-between;
+ align-items:flex-start;gap:12px}
+.dh .nm{font-size:19px;font-weight:700;letter-spacing:-.3px}
+.dh .mt{font-size:12.5px;opacity:.88;margin-top:3px}
+.dh .x{background:rgba(255,255,255,.18);border:0;color:#fff;font-size:20px;
+ width:33px;height:33px;border-radius:9px;cursor:pointer;flex-shrink:0;line-height:1}
+.dh .x:hover{background:rgba(255,255,255,.32)}
+.db{padding:18px 22px}
+.ds{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:9px;
+ padding:16px 22px 0}
+.ds div{background:var(--nen);border-radius:var(--bo-nho);padding:11px 8px;
+ text-align:center;border:1px solid var(--vien)}
+.ds .l{font-size:10px;color:var(--chu2);text-transform:uppercase;
+ letter-spacing:.5px;font-weight:700}
+.ds .v{font-size:19px;font-weight:700;color:var(--navy);margin-top:2px;
+ font-variant-numeric:tabular-nums;line-height:1.2}
+
+/* ---------- KHOI TRONG HO SO ---------- */
+.kh{margin-top:18px;padding-top:16px;border-top:1px solid var(--vien)}
+.kh:first-child{margin-top:0;padding-top:0;border-top:none}
+.kh h3{font-size:12.5px;color:var(--chu2);text-transform:uppercase;
+ letter-spacing:.9px;margin-bottom:11px;font-weight:700;
+ display:flex;align-items:center;gap:7px}
+.nxbox{background:var(--nen);border-radius:var(--bo-nho);padding:14px 16px;
+ font-size:14.5px;line-height:1.75;border:1px solid var(--vien)}
+
+/* ---------- LICH DI HOC ---------- */
+.lich{display:flex;flex-wrap:wrap;gap:7px}
+.bu{width:58px;border-radius:8px;padding:7px 3px;text-align:center;
+ border:1.5px solid;font-size:11px;line-height:1.35}
+.bu .d{font-weight:700;font-size:12.5px}
+.bu.co{background:var(--xanh-nen);border-color:#9ed3ba;color:var(--xanh)}
+.bu.vang{background:var(--do-nen);border-color:#eeaab7;color:var(--do)}
+.bu.chua{background:var(--nen);border-color:var(--vien);color:var(--chu3)}
+
+/* ---------- BIEU DO COT (diem KT) ---------- */
+/* Nen ke ngang giup phan biet cot khi may cot CAO BANG NHAU (vd 4 diem deu 10)
+   — khong co nen thi bon cot 10 diem nhin nhu MOT KHOI LIEN, mat y nghia bieu do */
+.cot{display:flex;align-items:flex-end;gap:11px;height:130px;padding:0 4px;
+ border-bottom:2px solid var(--navy3);margin-bottom:7px;position:relative;
+ background:repeating-linear-gradient(to top,transparent,transparent 24px,
+ var(--vien) 24px,var(--vien) 25px)}
+.cot .c{flex:1;display:flex;flex-direction:column;justify-content:flex-end;
+ align-items:center;height:100%;position:relative;z-index:1}
+.cot .c .sv{font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:3px;
+ font-variant-numeric:tabular-nums}
+.cot .c .th{width:100%;max-width:46px;border-radius:6px 6px 0 0;min-height:4px;
+ background:linear-gradient(180deg,var(--navy3),var(--navy2));
+ box-shadow:0 -1px 0 rgba(255,255,255,.55) inset}
+.cot .c.thap .th{background:linear-gradient(180deg,#d4657c,var(--do))}
+.cot .c.cao .th{background:linear-gradient(180deg,#3aa87a,var(--xanh))}
+.cot-nhan{display:flex;gap:11px;padding:0 4px}
+.cot-nhan span{flex:1;text-align:center;font-size:11px;color:var(--chu2);font-weight:600}
+
+/* ---------- VI TRI TRONG LOP ---------- */
+.vt{position:relative;height:38px;margin:6px 0 4px}
+.vt .day{position:absolute;left:0;right:0;top:15px;height:8px;border-radius:4px;
+ background:linear-gradient(90deg,#e8ecf2,#d3dae4)}
+.vt .con{position:absolute;top:6px;width:3px;height:26px;border-radius:2px;
+ background:var(--navy);transform:translateX(-50%)}
+.vt .con::after{content:"Con";position:absolute;top:-15px;left:50%;
+ transform:translateX(-50%);font-size:10px;font-weight:700;color:var(--navy);
+ white-space:nowrap}
+.vt .tb{position:absolute;top:9px;width:2px;height:20px;background:var(--chu3);
+ transform:translateX(-50%)}
+.vt-nhan{display:flex;justify-content:space-between;font-size:11px;color:var(--chu3)}
+
+/* ---------- IN GIAY ---------- */
+@media print{
+ body{background:#fff;padding:0;font-size:12px}
+ .card,.kpi{box-shadow:none;border:1px solid #ccc}
+ .hd{background:var(--navy)!important;-webkit-print-color-adjust:exact;
+  print-color-adjust:exact}
+ .ov,.hint,.thangs{display:none!important}
+ .nx{border:none;color:inherit}
+ table{font-size:10.5px}th{font-size:9.5px}
+ .card{page-break-inside:avoid}
+}
+
+/* ---------- DIEN THOAI ---------- */
+@media(max-width:640px){
+ body{padding:10px;font-size:14.5px}
+ .hd{padding:19px}.hd h1{font-size:21px}.hd .sub{font-size:12.5px}
+ .card{padding:15px}
+ .kpis{grid-template-columns:repeat(2,1fr);gap:9px}
+ .kpi{padding:12px 13px}.kpi .v{font-size:23px}
+ .pho{grid-template-columns:112px 1fr 32px;font-size:12.5px}
+ table{font-size:12.5px}
+ th:nth-child(2),td:nth-child(2){min-width:140px}
+ .dlg{max-width:100%}.db,.ds{padding-left:15px;padding-right:15px}
+ .dh{padding:15px}.dh .nm{font-size:17px}
+ .bu{width:52px}
+ .cot{height:112px;gap:8px}.cot-nhan{gap:8px}
+}
+@media(max-width:380px){
+ .kpis{grid-template-columns:1fr}
+}
+</style></head><body><div class="wrap">
+
+<div class="hd">
+ <div class="eb">Trung tâm Mapstudy Hạ Long</div>
+ <h1>Báo cáo học tập môn Vật lí — Lớp 11B</h1>
+ <div class="sub"><b>Tháng 8/2026</b> &nbsp;•&nbsp; Thầy Đinh Hoàng Tùng
+  &nbsp;•&nbsp; Ca học: 19H30 T2 &amp; T6</div>
+</div>
+
+
+<div class="kpis"><div class="kpi"><div class="l">Sĩ số</div><div class="v">31</div><div class="n">3 buổi học trong tháng</div></div><div class="kpi"><div class="l">Chuyên cần TB</div><div class="v">88%</div><div class="n">toàn lớp</div></div></div>
+
+<div class="card"><h2><span class="ico">📊</span>Kết quả học tập</h2><div class="note">Lớp <b>chưa tổ chức bài thi khảo sát</b> trong tháng này nên báo cáo chỉ gồm phần <b>chuyên cần</b>. Khi có bài thi, thầy cô sẽ cập nhật điểm và xếp hạng của các con.</div></div>
+
+<div class="card"><h2><span class="ico">📋</span>Bảng kết quả chi tiết</h2>
+ <div class="hint">👉 Bấm vào <b>tên con</b> để xem hồ sơ học tập đầy đủ:
+  biểu đồ tiến bộ qua các tháng, điểm từng bài kiểm tra, lịch đi học
+  và nhận xét riêng của thầy cô.</div>
+ <div class="scroll"><table><thead><tr><th>Hạng</th><th>Họ và tên</th><th>Trường</th><th>Đi học</th><th>Chuyên cần</th><th>Điểm thi</th><th>Xếp loại</th><th>Điểm xếp hạng</th></tr></thead><tbody><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="0">BẾ GIA NINH</span></td><td>TY</td><td>1/3</td><td><span class="tag r">33%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="1">CÙ HOÀNG GIA HÂN</span></td><td></td><td>0/0</td><td><span class="muted">—</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="2">CÙ HOÀNG GIA HÂN ( 20/7 )</span></td><td>VL</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="3">HOÀNG MINH ANH</span></td><td></td><td>0/0</td><td><span class="muted">—</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="4">HOÀNG MINH HÙNG</span></td><td>HG</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="5">LÊ THÀNH VINH</span></td><td>HG</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="6">LƯU QUANG NAM PHONG</span></td><td>VVH</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="7">NGUYỄN CHẤN HƯNG</span></td><td></td><td>0/0</td><td><span class="muted">—</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="8">NGUYỄN CHẤN HƯNG(17/07)</span></td><td>HG</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="9">NGUYỄN HÀ TRANG</span></td><td>HG</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="10">NGUYỄN THẢO LINH</span></td><td>BL</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="11">NGUYỄN TIẾN DŨNG</span></td><td>NQ</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="12">NGUYỄN TIẾN DŨNG A NGÔ QUYỀN</span></td><td></td><td>0/0</td><td><span class="muted">—</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="13">NGUYỄN TIẾN DŨNG B BÃI CHÁY</span></td><td></td><td>0/0</td><td><span class="muted">—</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="14">NGUYỄN TUẤN QUANG</span></td><td>HG</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="15">NGÔ TIẾN PHÚC</span></td><td></td><td>1/3</td><td><span class="tag r">33%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="16">PHẠM ANH KHÔI</span></td><td>NQ</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="17">PHẠM HÙNG ANH</span></td><td></td><td>0/0</td><td><span class="muted">—</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="18">PHẠM HÙNG ANH(17/7)</span></td><td>VL</td><td>2/3</td><td><span class="tag a">67%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="19">TRẦN BẢO QUANG</span></td><td>VL</td><td>1/3</td><td><span class="tag r">33%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="20">TRẦN HOÀNG ANH</span></td><td>HG</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="21">TRẦN VĂN ĐÔ(20/7)</span></td><td>CHL</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="22">VŨ QUANG SÁNG ( 10/8 )</span></td><td>NQ</td><td>2/3</td><td><span class="tag a">67%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="23">VŨ THÁI PHONG</span></td><td></td><td>0/0</td><td><span class="muted">—</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="24">VŨ THÁI PHONG(10/7)</span></td><td>NQ</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="25">ĐÀO HỮU PHÚC LÂM</span></td><td>NQ</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="26">ĐÀO MẠNH HÀ</span></td><td>HG</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="27">ĐÀO PHẠM HÙNG</span></td><td>NQ</td><td>3/3</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="28">ĐẶNG CHÍ HÙNG (10/8)</span></td><td>CHL</td><td>2/2</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="29">ĐỖ TUẤN MINH</span></td><td></td><td>0/0</td><td><span class="muted">—</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="30">ĐỖ TUẤN MINH(7/8 )</span></td><td>NQ</td><td>2/2</td><td><span class="tag g">100%</span></td><td>—</td><td>Chưa có điểm</td><td><span class="muted">chưa xếp hạng</span></td></tr></tbody></table></div>
+ <div class="legend"><code>Điểm xếp hạng</code> = Điểm thi khảo sát (lớp mới khai giảng, chưa có điểm kiểm tra thường xuyên)<br><code>Chuyên cần</code> tính từ buổi con bắt đầu học, không tính các buổi trước khi vào lớp<br><code>Xếp loại</code> theo điểm thi: Giỏi ≥9,0 · Khá 8,0–8,9 · TB khá 6,5–7,9 · Trung bình 5,0–6,4 · Yếu &lt;5,0</div>
+</div>
+
+<div class="foot">Trung tâm Mapstudy Hạ Long · Tổng hợp ngày 05/09/2026<br>
+Nguồn: bảng điểm danh &amp; bảng điểm Tháng 8/2026 của giáo viên</div>
+</div>
+
+<div class="ov" id="ov">
+ <div class="dlg" role="dialog" aria-modal="true" aria-labelledby="dnm">
+  <div class="dh">
+   <div><div class="nm" id="dnm"></div><div class="mt" id="dmt"></div></div>
+   <button class="x" id="dx" aria-label="Đóng">&times;</button>
+  </div>
+  <div class="noi"><div class="ds" id="dds"></div>
+  <div class="db" id="ddb"></div></div>
+ </div>
+</div>
+
+<script>
+var HS = [{"ten": "BẾ GIA NINH", "nx": "Tháng này con mới tham dự 1/3 buổi. Việc nghỉ nhiều khiến con khó theo kịp bài trên lớp — kính mong gia đình sắp xếp để con đi học đầy đủ hơn. Con vắng buổi ngày 6/8, 10/8. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 33, "comat": 1, "mauso": 3, "buoi": ["X", "P", "P"], "ngay": ["3/8", "6/8", "10/8"], "nv": ["6/8", "10/8"], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 6.35, "tb": 6.14, "hang": 9, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "CÙ HOÀNG GIA HÂN", "nx": "Tháng này con chưa có điểm bài thi khảo sát. Kính mong phụ huynh nhắc con tham gia đầy đủ buổi thi tháng sau để thầy cô đánh giá đúng năng lực và kịp thời hỗ trợ con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": null, "comat": 0, "mauso": 0, "buoi": [], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 8.0, "tb": 6.14, "hang": 1, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "CÙ HOÀNG GIA HÂN ( 20/7 )", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true}, {"ten": "HOÀNG MINH ANH", "nx": "Tháng này con chưa có điểm bài thi khảo sát. Kính mong phụ huynh nhắc con tham gia đầy đủ buổi thi tháng sau để thầy cô đánh giá đúng năng lực và kịp thời hỗ trợ con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": null, "comat": 0, "mauso": 0, "buoi": [], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 5.0, "tb": 6.14, "hang": 14, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "HOÀNG MINH HÙNG", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 4.5, "tb": 6.14, "hang": 17, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "LÊ THÀNH VINH", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 4.75, "tb": 6.14, "hang": 16, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "LƯU QUANG NAM PHONG", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 6.5, "tb": 6.14, "hang": 7, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "NGUYỄN CHẤN HƯNG", "nx": "Tháng này con chưa có điểm bài thi khảo sát. Kính mong phụ huynh nhắc con tham gia đầy đủ buổi thi tháng sau để thầy cô đánh giá đúng năng lực và kịp thời hỗ trợ con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": null, "comat": 0, "mauso": 0, "buoi": [], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 7.25, "tb": 6.14, "hang": 5, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "NGUYỄN CHẤN HƯNG(17/07)", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true}, {"ten": "NGUYỄN HÀ TRANG", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true}, {"ten": "NGUYỄN THẢO LINH", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 7.0, "tb": 6.14, "hang": 6, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "NGUYỄN TIẾN DŨNG", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true}, {"ten": "NGUYỄN TIẾN DŨNG A NGÔ QUYỀN", "nx": "Tháng này con chưa có điểm bài thi khảo sát. Kính mong phụ huynh nhắc con tham gia đầy đủ buổi thi tháng sau để thầy cô đánh giá đúng năng lực và kịp thời hỗ trợ con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": null, "comat": 0, "mauso": 0, "buoi": [], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 7.25, "tb": 6.14, "hang": 4, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "NGUYỄN TIẾN DŨNG B BÃI CHÁY", "nx": "Tháng này con chưa có điểm bài thi khảo sát. Kính mong phụ huynh nhắc con tham gia đầy đủ buổi thi tháng sau để thầy cô đánh giá đúng năng lực và kịp thời hỗ trợ con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": null, "comat": 0, "mauso": 0, "buoi": [], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 6.5, "tb": 6.14, "hang": 8, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "NGUYỄN TUẤN QUANG", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 6.0, "tb": 6.14, "hang": 10, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "NGÔ TIẾN PHÚC", "nx": "Tháng này con mới tham dự 1/3 buổi. Việc nghỉ nhiều khiến con khó theo kịp bài trên lớp — kính mong gia đình sắp xếp để con đi học đầy đủ hơn. Trong đó có 2 buổi con vắng chưa có phép, kính mong phụ huynh nhắc con báo trước với thầy cô khi có việc bận. Con vắng buổi ngày 3/8, 10/8. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 33, "comat": 1, "mauso": 3, "buoi": ["K", "X", "K"], "ngay": ["3/8", "6/8", "10/8"], "nv": ["3/8", "10/8"], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true}, {"ten": "PHẠM ANH KHÔI", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 5.1, "tb": 6.14, "hang": 13, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "PHẠM HÙNG ANH", "nx": "Tháng này con chưa có điểm bài thi khảo sát. Kính mong phụ huynh nhắc con tham gia đầy đủ buổi thi tháng sau để thầy cô đánh giá đúng năng lực và kịp thời hỗ trợ con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": null, "comat": 0, "mauso": 0, "buoi": [], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 4.45, "tb": 6.14, "hang": 18, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "PHẠM HÙNG ANH(17/7)", "nx": "Tháng này con mới tham dự 2/3 buổi. Việc nghỉ nhiều khiến con khó theo kịp bài trên lớp — kính mong gia đình sắp xếp để con đi học đầy đủ hơn. Con vắng buổi ngày 10/8. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 67, "comat": 2, "mauso": 3, "buoi": ["X", "X", "P"], "ngay": ["3/8", "6/8", "10/8"], "nv": ["10/8"], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true}, {"ten": "TRẦN BẢO QUANG", "nx": "Tháng này con mới tham dự 1/3 buổi. Việc nghỉ nhiều khiến con khó theo kịp bài trên lớp — kính mong gia đình sắp xếp để con đi học đầy đủ hơn. Trong đó có 2 buổi con vắng chưa có phép, kính mong phụ huynh nhắc con báo trước với thầy cô khi có việc bận. Con vắng buổi ngày 3/8, 10/8. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 33, "comat": 1, "mauso": 3, "buoi": ["K", "X", "K"], "ngay": ["3/8", "6/8", "10/8"], "nv": ["3/8", "10/8"], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true}, {"ten": "TRẦN HOÀNG ANH", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 8.0, "tb": 6.14, "hang": 2, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "TRẦN VĂN ĐÔ(20/7)", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true}, {"ten": "VŨ QUANG SÁNG ( 10/8 )", "nx": "Tháng này con mới tham dự 2/3 buổi. Việc nghỉ nhiều khiến con khó theo kịp bài trên lớp — kính mong gia đình sắp xếp để con đi học đầy đủ hơn. Con vắng buổi ngày 10/8. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 67, "comat": 2, "mauso": 3, "buoi": ["X", "X", "P"], "ngay": ["3/8", "6/8", "10/8"], "nv": ["10/8"], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true}, {"ten": "VŨ THÁI PHONG", "nx": "Tháng này con chưa có điểm bài thi khảo sát. Kính mong phụ huynh nhắc con tham gia đầy đủ buổi thi tháng sau để thầy cô đánh giá đúng năng lực và kịp thời hỗ trợ con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": null, "comat": 0, "mauso": 0, "buoi": [], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 5.6, "tb": 6.14, "hang": 11, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "VŨ THÁI PHONG(10/7)", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true}, {"ten": "ĐÀO HỮU PHÚC LÂM", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 5.0, "tb": 6.14, "hang": 15, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "ĐÀO MẠNH HÀ", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true}, {"ten": "ĐÀO PHẠM HÙNG", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 3/3 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 3, "mauso": 3, "buoi": ["X", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 7.85, "tb": 6.14, "hang": 3, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "ĐẶNG CHÍ HÙNG (10/8)", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 2/2 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 2, "mauso": 2, "buoi": ["", "X", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true}, {"ten": "ĐỖ TUẤN MINH", "nx": "Tháng này con chưa có điểm bài thi khảo sát. Kính mong phụ huynh nhắc con tham gia đầy đủ buổi thi tháng sau để thầy cô đánh giá đúng năng lực và kịp thời hỗ trợ con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": null, "comat": 0, "mauso": 0, "buoi": [], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 5.35, "tb": 6.14, "hang": 12, "siso": 18, "lop": "11B"}], "vt": null, "chi_thi": true}, {"ten": "ĐỖ TUẤN MINH(7/8 )", "nx": "Con đi học rất đều đặn, tham dự đầy đủ 2/2 buổi trong tháng — thầy cô ghi nhận tinh thần học tập nghiêm túc của con. Lớp chưa tổ chức bài thi khảo sát trong tháng nên thầy cô chưa có điểm để đánh giá năng lực của con. Kính mong phụ huynh tiếp tục đồng hành cùng con.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 31, "xl": "Chưa có điểm", "xh": null, "cc": 100, "comat": 2, "mauso": 2, "buoi": ["X", "", "X"], "ngay": ["3/8", "6/8", "10/8"], "nv": [], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true}];
+var ov = document.getElementById('ov');
+function esc(s){var d=document.createElement('div');d.textContent=s==null?'':s;return d.innerHTML;}
+function sv(v){return v==null?'—':v.toFixed(2).replace('.',',');}
+function sg(v){return v==null?'—':(v.toFixed(2).replace(/0+$/,'').replace(/\.$/,'')).replace('.',',');}
+
+/* ---- 1. BIEU DO DIEM THI QUA CAC THANG ---- */
+function veTienBo(h){
+  if(!h.moc || h.moc.length<2){
+    return '<div class="kh"><h3>📈 Tiến bộ qua các tháng</h3>'
+     +'<div class="note">Đây là <b>tháng đầu tiên</b> con học tại trung tâm nên chưa có '
+     +'tháng trước để so sánh. Từ tháng sau, mục này sẽ hiện biểu đồ tiến bộ của con.</div></div>';
+  }
+  var W=100, n=h.moc.length;
+  var pts=h.moc.map(function(m,i){
+    return {x: n===1?50:(i/(n-1))*W, y: m.thi, tb:m.tb, t:m.t, hang:m.hang, siso:m.siso};
+  });
+  /* Thang TU CO theo du lieu that. Co dinh 4..10 thi chenh 0,25 diem bi nen
+     thanh duong phang, phu huynh khong thay tien bo dau ca. */
+  var vals=[]; pts.forEach(function(p){vals.push(p.y); if(p.tb!=null)vals.push(p.tb);});
+  var lo=Math.min.apply(null,vals), hi=Math.max.apply(null,vals);
+  var bien=Math.max(0.55,(hi-lo)*0.42);        /* dem tren duoi cho de nhin */
+  var y0=Math.max(0,lo-bien), y1=Math.min(10,hi+bien);
+  if(y1-y0<1.1){ var g=(1.1-(y1-y0))/2; y0=Math.max(0,y0-g); y1=Math.min(10,y1+g); }
+  function ty(v){ return 100 - ((v-y0)/(y1-y0))*100; }
+  var dCon='', dTb='';
+  pts.forEach(function(p,i){
+    dCon += (i?' L':'M')+p.x.toFixed(1)+' '+ty(p.y).toFixed(1);
+    if(p.tb!=null) dTb += (i?' L':'M')+p.x.toFixed(1)+' '+ty(p.tb).toFixed(1);
+  });
+  var cham='';
+  pts.forEach(function(p){
+    cham += '<circle cx="'+p.x.toFixed(1)+'" cy="'+ty(p.y).toFixed(1)
+         +'" r="3.4" fill="#152a4e" stroke="#fff" stroke-width="1.6"/>';
+  });
+  var dau=pts[0].y, cuoi=pts[pts.length-1].y, ch=cuoi-dau;
+  var mui = ch>0.05 ? '<span class="tag g">▲ tăng '+sg(ch)+' điểm</span>'
+          : (ch<-0.05 ? '<span class="tag a">▼ giảm '+sg(-ch)+' điểm</span>'
+          : '<span class="tag b">■ giữ nguyên</span>');
+  var nhan='', bang='';
+  pts.forEach(function(p){
+    nhan += '<span style="flex:1;text-align:center;font-size:10.5px;color:#5a6b80;'
+         +'font-weight:600">'+esc(p.t)+'</span>';
+    bang += '<tr><td style="text-align:left;padding:6px 4px;font-size:12.5px">'+esc(p.t)+'</td>'
+         +'<td style="padding:6px 4px;font-weight:700;font-size:13px">'+sv(p.y)+'</td>'
+         +'<td style="padding:6px 4px;color:#5a6b80;font-size:12.5px">'+sv(p.tb)+'</td>'
+         +'<td style="padding:6px 4px;font-size:12.5px">'
+         +(p.hang?p.hang+'/'+p.siso:'—')+'</td></tr>';
+  });
+  return '<div class="kh"><h3>📈 Tiến bộ qua các tháng</h3>'
+   +'<div style="margin-bottom:10px">'+mui+'</div>'
+   +'<svg viewBox="0 0 100 100" preserveAspectRatio="none" '
+   +'style="width:100%;height:118px;background:#fafbfd;border:1px solid #e3e9f0;'
+   +'border-radius:9px;padding:0">'
+   +'<line x1="0" y1="'+ty((y0+y1)/2).toFixed(1)+'" x2="100" y2="'+ty((y0+y1)/2).toFixed(1)
+   +'" stroke="#e3e9f0" stroke-width=".6" stroke-dasharray="2 2"/>'
+   +(dTb?'<path d="'+dTb+'" fill="none" stroke="#8d9bad" stroke-width="1.4" '
+   +'stroke-dasharray="3 2" vector-effect="non-scaling-stroke"/>':'')
+   +'<path d="'+dCon+'" fill="none" stroke="#152a4e" stroke-width="2.4" '
+   +'vector-effect="non-scaling-stroke" stroke-linejoin="round"/>'+cham+'</svg>'
+   +'<div style="display:flex;justify-content:space-between;font-size:10px;'
+   +'color:#8d9bad;margin-top:3px"><span>thang điểm '+sg(y0)+' – '+sg(y1)+'</span></div>'
+   +'<div style="display:flex;margin-top:2px">'+nhan+'</div>'
+   +'<div style="font-size:11px;color:#8d9bad;margin-top:7px">'
+   +'<b style="color:#152a4e">──</b> điểm của con &nbsp;&nbsp;'
+   +'<b style="color:#8d9bad">- -</b> trung bình lớp</div>'
+   +'<table style="width:100%;margin-top:11px;border-collapse:collapse;font-size:12.5px">'
+   +'<thead><tr style="background:#f4f6fa">'
+   +'<th style="text-align:left;padding:6px 4px;font-size:10.5px;color:#5a6b80;'
+   +'background:none;letter-spacing:.4px">THÁNG</th>'
+   +'<th style="padding:6px 4px;font-size:10.5px;color:#5a6b80;background:none">CON</th>'
+   +'<th style="padding:6px 4px;font-size:10.5px;color:#5a6b80;background:none">TB LỚP</th>'
+   +'<th style="padding:6px 4px;font-size:10.5px;color:#5a6b80;background:none">HẠNG</th>'
+   +'</tr></thead><tbody>'+bang+'</tbody></table></div>';
+}
+
+/* ---- 2. BIEU DO COT 4 DIEM KIEM TRA ---- */
+function veKT(h){
+  var ds=(h.kt||[]).filter(function(x){return x!=null;});
+  if(!ds.length) return '';
+  var cot='',nhan='';
+  (h.kt||[]).forEach(function(v,i){
+    if(v==null){
+      cot+='<div class="c"><div class="sv" style="color:#8d9bad">—</div>'
+          +'<div class="th" style="height:3px;background:#e3e9f0"></div></div>';
+    }else{
+      var cls = v>=9?' cao':(v<6.5?' thap':'');
+      cot+='<div class="c'+cls+'"><div class="sv">'+sg(v)+'</div>'
+          +'<div class="th" style="height:'+Math.max(6,(v/10)*100)+'%"></div></div>';
+    }
+    nhan+='<span>Bài '+(i+1)+'</span>';
+  });
+  return '<div class="kh"><h3>📝 Điểm kiểm tra trên lớp</h3>'
+   +'<div class="cot">'+cot+'</div><div class="cot-nhan">'+nhan+'</div>'
+   +'<div style="font-size:11.5px;color:#8d9bad;margin-top:8px">'
+   +'Trung bình <b style="color:#152a4e">'+sv(h.tbkt)+'</b></div></div>';
+}
+
+/* ---- 3. LICH DI HOC ---- */
+function veLich(h){
+  if(!h.ngay || !h.ngay.length) return '';
+  var o='';
+  h.ngay.forEach(function(d,i){
+    var v=h.buoi[i];
+    var cls = v==='X'?'co':(v==='O'?'vang':'chua');
+    var ic  = v==='X'?'✓':(v==='O'?'✗':'·');
+    o+='<div class="bu '+cls+'"><div class="d">'+esc(d)+'</div>'+ic+'</div>';
+  });
+  var tom='<b style="color:#152a4e">'+h.comat+'/'+h.mauso+' buổi</b>'
+        +(h.cc!=null?' ('+h.cc+'%)':'');
+  var them='';
+  if(h.gop) them='<div style="font-size:11.5px;color:#8d9bad;margin-top:7px">'
+   +'Con '+esc(h.dalop||'học 2 lớp')+' — dải ô trên là lịch của <b>lớp này</b>, '
+   +'còn tỉ lệ '+tom+' là tổng hợp <b>cả hai lớp</b>.</div>';
+  var vang='';
+  if(h.nv && h.nv.length) vang='<div class="warn" style="margin-top:9px;margin-bottom:0">'
+   +'<b>Buổi con vắng:</b> '+esc(h.nv.join(', '))+'</div>';
+  return '<div class="kh"><h3>📅 Lịch đi học trong tháng</h3>'
+   +'<div class="lich">'+o+'</div>'
+   +'<div style="font-size:12.5px;color:#5a6b80;margin-top:9px">Đi học '+tom+'</div>'
+   +them+vang+'</div>';
+}
+
+/* ---- 4. VI TRI TRONG LOP ---- */
+function veViTri(h){
+  if(!h.vt) return '';
+  var v=h.vt, tbx = (v.max>v.min)? ((v.tb-v.min)/(v.max-v.min))*100 : 50;
+  return '<div class="kh"><h3>🎯 Vị trí trong lớp</h3>'
+   +'<div class="vt"><div class="day"></div>'
+   +'<div class="tb" style="left:'+tbx.toFixed(1)+'%"></div>'
+   +'<div class="con" style="left:'+v.pct+'%"></div></div>'
+   +'<div class="vt-nhan"><span>thấp nhất lớp '+sg(v.min)+'</span>'
+   +'<span>cao nhất lớp '+sg(v.max)+'</span></div>'
+   +'<div style="font-size:12.5px;color:#5a6b80;margin-top:9px">'
+   +'Điểm thi của con <b style="color:#152a4e">'+sv(h.thi)+'</b>'
+   +(h.hang?' — xếp thứ <b style="color:#152a4e">'+h.hang+'/'+h.siso+'</b> lớp':'')
+   +'. Vạch xám là điểm trung bình lớp ('+sv(v.tb)+').</div></div>';
+}
+
+function mo(i){
+  var h=HS[i]; if(!h) return;
+  document.getElementById('dnm').textContent=h.ten;
+  document.getElementById('dmt').textContent=
+    (h.hang?'Hạng '+h.hang+'/'+h.siso+' của lớp · ':'')+h.xl;
+  /* Chi hien o NAO CO SO THAT. O toan dau gach ngang lam phu huynh tuong hong. */
+  var o=[];
+  if(h.thi!=null) o.push(['Điểm thi',sv(h.thi)]);
+  if(!h.chi_thi && h.tbkt!=null) o.push(['TB kiểm tra',sv(h.tbkt)]);
+  if(h.cc!=null) o.push(['Chuyên cần',h.comat+'/'+h.mauso+' ('+h.cc+'%)']);
+  if(h.xh!=null) o.push(['Điểm xếp hạng',sv(h.xh)]);
+  document.getElementById('dds').innerHTML=o.map(function(x){
+    return '<div><div class="l">'+esc(x[0])+'</div><div class="v">'+esc(x[1])+'</div></div>';
+  }).join('');
+  document.getElementById('ddb').innerHTML=
+    veTienBo(h)+veKT(h)+veLich(h)+veViTri(h)
+    +'<div class="kh"><h3>💬 Nhận xét của thầy cô</h3>'
+    +'<div class="nxbox">'+esc(h.nx)+'</div></div>';
+  ov.classList.add('on');
+  document.body.style.overflow='hidden';
+  ov.scrollTop=0;
+  var noi=ov.querySelector('.noi'); if(noi) noi.scrollTop=0;
+}
+function dong(){ov.classList.remove('on');document.body.style.overflow='';}
+document.addEventListener('click',function(ev){
+  var t=ev.target.closest?ev.target.closest('.nx'):null;
+  if(t){mo(+t.getAttribute('data-i'));return;}
+  if(ev.target===ov||ev.target.id==='dx')dong();
+});
+document.addEventListener('keydown',function(ev){if(ev.key==='Escape')dong();});
+</script>
+</body></html>
