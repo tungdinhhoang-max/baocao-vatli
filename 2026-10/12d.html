@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Báo cáo Vật lí 12D — Tháng 10/2026</title>
+<style>
+:root{
+  --navy:#152a4e; --navy2:#22406e; --navy3:#3a628f;
+  --xanh:#0f7b52; --xanh-nen:#e6f4ed;
+  --ho:#9a6400;  --ho-nen:#fdf3dc;
+  --do:#a8253c;  --do-nen:#fdeaee;
+  --lam:#1668b3; --lam-nen:#e8f2fb;
+  --chu:#16202e; --chu2:#5a6b80; --chu3:#8d9bad;
+  --vien:#e3e9f0; --nen:#f4f6fa; --trang:#fff;
+  --bo:14px; --bo-nho:9px;
+  --do-bong:0 1px 2px rgba(21,42,78,.06),0 4px 14px rgba(21,42,78,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:'Segoe UI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif;
+ background:var(--nen);color:var(--chu);line-height:1.55;padding:18px;
+ font-size:15px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:940px;margin:0 auto}
+
+/* ---------- DAU TRANG ---------- */
+.hd{background:linear-gradient(135deg,var(--navy),var(--navy2) 62%,var(--navy3));
+ color:#fff;border-radius:var(--bo);padding:24px 26px;margin-bottom:14px;
+ box-shadow:0 6px 22px rgba(21,42,78,.2);position:relative;overflow:hidden}
+.hd::after{content:"";position:absolute;right:-46px;top:-46px;width:190px;height:190px;
+ border-radius:50%;background:rgba(255,255,255,.055)}
+.hd .eb{font-size:11px;letter-spacing:2.6px;opacity:.8;text-transform:uppercase;
+ font-weight:600}
+.hd h1{font-size:26px;margin:7px 0 5px;font-weight:700;letter-spacing:-.3px;line-height:1.25}
+.hd .sub{font-size:13.5px;opacity:.93}
+.hd .sub b{font-weight:600}
+
+/* ---------- DAI CHON THANG ---------- */
+.thangs{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:14px}
+.thangs .nh{font-size:12px;color:var(--chu2);font-weight:600;margin-right:3px}
+.thangs a{text-decoration:none;font-size:13px;font-weight:600;padding:7px 15px;
+ border-radius:22px;border:1px solid var(--vien);color:var(--navy);background:var(--trang);
+ transition:.15s}
+.thangs a.on{background:var(--navy);color:#fff;border-color:var(--navy);
+ box-shadow:0 2px 8px rgba(21,42,78,.22)}
+.thangs a:hover{border-color:var(--navy3)}
+
+/* ---------- THE ---------- */
+.card{background:var(--trang);border-radius:var(--bo);padding:20px;
+ margin-bottom:14px;box-shadow:var(--do-bong);border:1px solid var(--vien)}
+.card h2{font-size:15px;color:var(--navy);margin-bottom:15px;font-weight:700;
+ display:flex;align-items:center;gap:8px;letter-spacing:-.1px}
+.card h2 .ico{font-size:16px}
+
+/* ---------- O SO LIEU (KPI) ---------- */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(138px,1fr));
+ gap:11px;margin-bottom:14px}
+.kpi{background:var(--trang);border-radius:var(--bo-nho);padding:15px 16px;
+ box-shadow:var(--do-bong);border:1px solid var(--vien);border-top:3px solid var(--navy2)}
+.kpi .l{font-size:10.5px;color:var(--chu2);text-transform:uppercase;
+ letter-spacing:.7px;font-weight:700}
+.kpi .v{font-size:27px;font-weight:700;color:var(--navy);margin-top:4px;
+ letter-spacing:-.8px;line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi .n{font-size:11.5px;color:var(--chu3);margin-top:3px}
+
+/* ---------- HUY CHUONG / TOP ---------- */
+.top3{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:11px}
+.t3{border-radius:var(--bo-nho);padding:16px;text-align:center;border:1.5px solid;
+ background:var(--trang)}
+.t3.a1{background:linear-gradient(170deg,#fffdf2,#fff8dd);border-color:#e0b62c}
+.t3.a2{background:linear-gradient(170deg,#fbfcfd,#f0f3f7);border-color:#b3bdc9}
+.t3.a3{background:linear-gradient(170deg,#fffaf5,#fdefe2);border-color:#d09461}
+.t3 .m{font-size:29px;line-height:1}
+.t3 .n{font-weight:700;margin:6px 0 3px;font-size:14.5px;color:var(--navy)}
+.t3 .s{font-size:12px;color:var(--chu2);line-height:1.6}
+.t3 .s b{color:var(--navy);font-size:14px}
+
+/* ---------- BANG ---------- */
+.scroll{overflow-x:auto;border-radius:var(--bo-nho);border:1px solid var(--vien);
+ -webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{background:var(--navy2);color:#fff;padding:11px 8px;text-align:center;
+ font-weight:600;font-size:11.5px;letter-spacing:.3px;white-space:nowrap}
+th:nth-child(2){text-align:left}
+td{padding:9px 7px;border-bottom:1px solid var(--vien);text-align:center;
+ white-space:nowrap;font-variant-numeric:tabular-nums}
+th:nth-child(2),td:nth-child(2){text-align:left;font-weight:600;
+ min-width:172px;white-space:normal}
+th:nth-child(1),td:nth-child(1){width:52px}
+tbody tr:nth-child(even){background:#fafbfd}
+tbody tr:hover{background:var(--lam-nen)}
+tbody tr:last-child td{border-bottom:none}
+
+/* ---------- NHAN TRANG THAI ---------- */
+.tag{font-weight:700;border-radius:5px;padding:2.5px 8px;display:inline-block;
+ font-size:12.5px;white-space:nowrap}
+.tag.g{background:var(--xanh-nen);color:var(--xanh)}
+.tag.r{background:var(--do-nen);color:var(--do)}
+.tag.a{background:var(--ho-nen);color:var(--ho)}
+.tag.b{background:var(--lam-nen);color:var(--lam)}
+.muted{color:var(--chu3);font-style:italic}
+.xh{font-weight:700;color:var(--navy);font-size:14.5px}
+.ghi{font-size:11.5px;color:var(--chu3);font-weight:400;display:block;margin-top:1px}
+
+/* ---------- PHO DIEM ---------- */
+.pho{display:grid;grid-template-columns:158px 1fr 40px;gap:10px;align-items:center;
+ margin-bottom:8px;font-size:13px}
+.pho .nm{color:var(--chu2);font-weight:500}
+.pho b{text-align:right;font-variant-numeric:tabular-nums;color:var(--navy)}
+.bar{height:9px;background:#eef1f6;border-radius:5px;overflow:hidden}
+.bar>i{display:block;height:100%;border-radius:5px;
+ background:linear-gradient(90deg,var(--navy2),var(--navy3))}
+
+/* ---------- TEN BAM DUOC ---------- */
+.nx{cursor:pointer;color:var(--navy);border-bottom:1.5px dotted var(--navy3);
+ padding-bottom:1px}
+.nx:hover{color:var(--lam);border-color:var(--lam)}
+.hint{font-size:12.5px;color:var(--chu2);margin-bottom:12px;
+ background:var(--lam-nen);border-left:3px solid var(--lam);
+ padding:9px 13px;border-radius:0 7px 7px 0}
+
+/* ---------- GHI CHU ---------- */
+.note{background:var(--lam-nen);border-left:4px solid var(--navy2);
+ border-radius:0 var(--bo-nho) var(--bo-nho) 0;padding:13px 16px;font-size:13px;
+ color:var(--chu);line-height:1.7}
+.warn{background:var(--ho-nen);border-left:4px solid #d99a00;border-radius:0 7px 7px 0;
+ padding:11px 14px;margin-bottom:8px;font-size:13.5px}
+.legend{font-size:12px;color:var(--chu2);margin-top:13px;line-height:2}
+.legend code{background:var(--nen);padding:2.5px 8px;border-radius:5px;
+ font-family:inherit;font-weight:700;color:var(--navy);font-size:11.5px}
+.foot{text-align:center;color:var(--chu3);font-size:11.5px;margin-top:22px;
+ padding-top:15px;border-top:1px solid var(--vien);line-height:1.8}
+
+/* ---------- HOP THOAI HO SO ---------- */
+.ov{position:fixed;inset:0;background:rgba(11,22,40,.62);display:none;
+ align-items:flex-start;justify-content:center;padding:16px;z-index:99;
+ overflow-y:auto;backdrop-filter:blur(3px)}
+.ov.on{display:flex}
+.dlg{background:var(--trang);border-radius:var(--bo);max-width:600px;width:100%;
+ box-shadow:0 18px 55px rgba(0,0,0,.32);margin:0 auto;overflow:hidden;
+ max-height:calc(100vh - 32px);display:flex;flex-direction:column}
+.dlg .dh{flex-shrink:0}
+.dlg .noi{overflow-y:auto;-webkit-overflow-scrolling:touch}
+.dh{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;
+ padding:18px 22px;display:flex;justify-content:space-between;
+ align-items:flex-start;gap:12px}
+.dh .nm{font-size:19px;font-weight:700;letter-spacing:-.3px}
+.dh .mt{font-size:12.5px;opacity:.88;margin-top:3px}
+.dh .x{background:rgba(255,255,255,.18);border:0;color:#fff;font-size:20px;
+ width:33px;height:33px;border-radius:9px;cursor:pointer;flex-shrink:0;line-height:1}
+.dh .x:hover{background:rgba(255,255,255,.32)}
+.db{padding:18px 22px}
+.ds{display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:9px;
+ padding:16px 22px 0}
+.ds div{background:var(--nen);border-radius:var(--bo-nho);padding:11px 8px;
+ text-align:center;border:1px solid var(--vien)}
+.ds .l{font-size:10px;color:var(--chu2);text-transform:uppercase;
+ letter-spacing:.5px;font-weight:700}
+.ds .v{font-size:19px;font-weight:700;color:var(--navy);margin-top:2px;
+ font-variant-numeric:tabular-nums;line-height:1.2}
+
+/* ---------- KHOI TRONG HO SO ---------- */
+.kh{margin-top:18px;padding-top:16px;border-top:1px solid var(--vien)}
+.kh:first-child{margin-top:0;padding-top:0;border-top:none}
+.kh h3{font-size:12.5px;color:var(--chu2);text-transform:uppercase;
+ letter-spacing:.9px;margin-bottom:11px;font-weight:700;
+ display:flex;align-items:center;gap:7px}
+.nxbox{background:var(--nen);border-radius:var(--bo-nho);padding:14px 16px;
+ font-size:14.5px;line-height:1.75;border:1px solid var(--vien)}
+
+/* ---------- LICH DI HOC ---------- */
+.lich{display:flex;flex-wrap:wrap;gap:7px}
+.bu{width:58px;border-radius:8px;padding:7px 3px;text-align:center;
+ border:1.5px solid;font-size:11px;line-height:1.35}
+.bu .d{font-weight:700;font-size:12.5px}
+.bu.co{background:var(--xanh-nen);border-color:#9ed3ba;color:var(--xanh)}
+.bu.vang{background:var(--do-nen);border-color:#eeaab7;color:var(--do)}
+.bu.chua{background:var(--nen);border-color:var(--vien);color:var(--chu3)}
+
+/* ---------- BIEU DO COT (diem KT) ---------- */
+/* Nen ke ngang giup phan biet cot khi may cot CAO BANG NHAU (vd 4 diem deu 10)
+   — khong co nen thi bon cot 10 diem nhin nhu MOT KHOI LIEN, mat y nghia bieu do */
+.cot{display:flex;align-items:flex-end;gap:11px;height:130px;padding:0 4px;
+ border-bottom:2px solid var(--navy3);margin-bottom:7px;position:relative;
+ background:repeating-linear-gradient(to top,transparent,transparent 24px,
+ var(--vien) 24px,var(--vien) 25px)}
+.cot .c{flex:1;display:flex;flex-direction:column;justify-content:flex-end;
+ align-items:center;height:100%;position:relative;z-index:1}
+.cot .c .sv{font-size:12.5px;font-weight:700;color:var(--navy);margin-bottom:3px;
+ font-variant-numeric:tabular-nums}
+.cot .c .th{width:100%;max-width:46px;border-radius:6px 6px 0 0;min-height:4px;
+ background:linear-gradient(180deg,var(--navy3),var(--navy2));
+ box-shadow:0 -1px 0 rgba(255,255,255,.55) inset}
+.cot .c.thap .th{background:linear-gradient(180deg,#d4657c,var(--do))}
+.cot .c.cao .th{background:linear-gradient(180deg,#3aa87a,var(--xanh))}
+.cot-nhan{display:flex;gap:11px;padding:0 4px}
+.cot-nhan span{flex:1;text-align:center;font-size:11px;color:var(--chu2);font-weight:600}
+
+/* --- tom tat BAI TAP AZOTA trong ho so tung em (them 08/09) --- */
+.bt-tom{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:12px}
+.bt-tom>div{flex:1;min-width:96px;background:var(--nen2,#f4f6fa);
+  border:1px solid var(--vien,#e6ebf2);border-radius:9px;padding:8px 10px}
+.bt-tom .l{display:block;font-size:10.5px;color:var(--chu2);
+  text-transform:uppercase;letter-spacing:.4px;font-weight:700;margin-bottom:3px}
+.bt-tom .v{display:block;font-size:15px;font-weight:800;color:var(--chu1,#152a4e)}
+
+
+/* ---------- VI TRI TRONG LOP ---------- */
+.vt{position:relative;height:38px;margin:6px 0 4px}
+.vt .day{position:absolute;left:0;right:0;top:15px;height:8px;border-radius:4px;
+ background:linear-gradient(90deg,#e8ecf2,#d3dae4)}
+.vt .con{position:absolute;top:6px;width:3px;height:26px;border-radius:2px;
+ background:var(--navy);transform:translateX(-50%)}
+.vt .con::after{content:"Con";position:absolute;top:-15px;left:50%;
+ transform:translateX(-50%);font-size:10px;font-weight:700;color:var(--navy);
+ white-space:nowrap}
+.vt .tb{position:absolute;top:9px;width:2px;height:20px;background:var(--chu3);
+ transform:translateX(-50%)}
+.vt-nhan{display:flex;justify-content:space-between;font-size:11px;color:var(--chu3)}
+
+/* ---------- IN GIAY ---------- */
+@media print{
+ body{background:#fff;padding:0;font-size:12px}
+ .card,.kpi{box-shadow:none;border:1px solid #ccc}
+ .hd{background:var(--navy)!important;-webkit-print-color-adjust:exact;
+  print-color-adjust:exact}
+ .ov,.hint,.thangs{display:none!important}
+ .nx{border:none;color:inherit}
+ table{font-size:10.5px}th{font-size:9.5px}
+ .card{page-break-inside:avoid}
+}
+
+/* ---------- DIEN THOAI ---------- */
+@media(max-width:640px){
+ body{padding:10px;font-size:14.5px}
+ .hd{padding:19px}.hd h1{font-size:21px}.hd .sub{font-size:12.5px}
+ .card{padding:15px}
+ .kpis{grid-template-columns:repeat(2,1fr);gap:9px}
+ .kpi{padding:12px 13px}.kpi .v{font-size:23px}
+ .pho{grid-template-columns:112px 1fr 32px;font-size:12.5px}
+ table{font-size:12.5px}
+ th:nth-child(2),td:nth-child(2){min-width:140px}
+ .dlg{max-width:100%}.db,.ds{padding-left:15px;padding-right:15px}
+ .dh{padding:15px}.dh .nm{font-size:17px}
+ .bu{width:52px}
+ .cot{height:112px;gap:8px}.cot-nhan{gap:8px}
+}
+@media(max-width:380px){
+ .kpis{grid-template-columns:1fr}
+}
+</style></head><body><div class="wrap">
+
+<div class="hd">
+ <div class="eb">Trung tâm Mapstudy Hạ Long</div>
+ <h1>Báo cáo học tập môn Vật lí — Lớp 12D</h1>
+ <div class="sub"><b>Tháng 10/2026</b> &nbsp;•&nbsp; Thầy Đinh Hoàng Tùng
+  &nbsp;•&nbsp; Ca học: 19H30 THỨ 5 &amp; 14H30 SÁNG CHỦ NHẬT</div>
+</div>
+
+
+<!--DAITHANG--><style>.dthang{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:0 0 14px}.dthang .nh{font-size:12.5px;color:#64748b;font-weight:600;margin-right:3px}.dthang a{text-decoration:none;font-size:13px;font-weight:600;padding:7px 15px;border-radius:22px;border:1px solid #d5deea;color:#152a4e;background:#fff}.dthang a.on{background:#152a4e;color:#fff;border-color:#152a4e}.dthang a:hover{border-color:#3a628f}@media print{.dthang{display:none}}</style><nav class="dthang no-print"><span class="nh">Xem tháng:</span><a class="on" href="../2026-10/12d.html">Tháng 10/2026</a><a class="" href="../2026-09/12d.html">Tháng 9/2026</a><a class="" href="../2026-08/12d.html">Tháng 8/2026</a></nav><!--/DAITHANG-->
+<div class="kpis"><div class="kpi"><div class="l">Sĩ số</div><div class="v">39</div><div class="n">8 buổi học trong tháng</div></div><div class="kpi"><div class="l">Điểm thi TB</div><div class="v">8,12</div><div class="n">cao nhất 9,75 · thấp nhất 6,34</div></div><div class="kpi"><div class="l">Số em có điểm</div><div class="v">26/39</div><div class="n">đã dự thi</div></div><div class="kpi"><div class="l">Chuyên cần TB</div><div class="v">96%</div><div class="n">toàn lớp</div></div></div>
+
+<div class="card"><h2><span class="ico">🏆</span>Top 3 của lớp</h2><div class="top3"><div class="t3 a1"><div class="m">🥇</div><div class="n">TRỊNH QUỐC BẢO DUY</div><div class="s">Điểm xếp hạng <b>9,69</b><br>thi 9,75 · chuyên cần 100%</div></div><div class="t3 a2"><div class="m">🥈</div><div class="n">PHẠM ĐÌNH BẢO NGỌC</div><div class="s">Điểm xếp hạng <b>9,58</b><br>thi 9,75 · chuyên cần 100%</div></div><div class="t3 a3"><div class="m">🥉</div><div class="n">MAI HÀ BẮC</div><div class="s">Điểm xếp hạng <b>9,21</b><br>thi 9,38 · chuyên cần 100%</div></div></div></div><div class="card"><h2><span class="ico">📊</span>Phổ điểm thi khảo sát</h2><div class="pho"><span class="nm">Giỏi (≥9,0)</span><span class="bar"><i style="width:31%"></i></span><b>4</b></div><div class="pho"><span class="nm">Khá (8,0–8,9)</span><span class="bar"><i style="width:77%"></i></span><b>10</b></div><div class="pho"><span class="nm">TB khá (6,5–7,9)</span><span class="bar"><i style="width:77%"></i></span><b>10</b></div><div class="pho"><span class="nm">Trung bình (5,0–6,4)</span><span class="bar"><i style="width:15%"></i></span><b>2</b></div><div class="pho"><span class="nm">Yếu (&lt;5,0)</span><span class="bar"><i style="width:0%"></i></span><b>0</b></div><div class="pho"><span class="nm">Chưa có điểm thi</span><span class="bar"><i style="width:100%"></i></span><b>13</b></div></div><div class="card"><h2><span class="ico">📚</span>Điểm bài tập về nhà trên Azota</h2><div class="note"><b>Điểm xếp hạng</b> tháng này gồm ba phần: <b>bài thi 70%</b> · <b>bài tập về nhà 20%</b> · <b>chuyên cần 10%</b>.<br>Điểm bài tập tính bằng <b>điểm trung bình các bài con đã làm</b> nhân với <b>tỉ lệ số bài con làm</b>. Ví dụ con làm 7/9 bài, các bài đó trung bình 8,0 điểm thì điểm bài tập là 8,0 × 78% = 6,2. Cách tính này ghi nhận cả <b>sự chăm chỉ</b> lẫn <b>chất lượng</b> làm bài.<br>Tháng này lớp có <b>8 con chưa làm bài nào</b> nên phần điểm bài tập của con bằng 0.</div></div><div class="card"><h2><span class="ico">ℹ️</span>Về các con chưa có điểm thi</h2><div class="note">Tháng này lớp có <b>13 con chưa có điểm bài thi khảo sát</b> (con vắng buổi thi, hoặc bài của con chưa chấm xong). Các con này <b>chưa được xếp hạng</b> trong tháng, và ô điểm để trống <b>không phải là điểm 0</b>. Phần chuyên cần của con vẫn được ghi nhận đầy đủ ở bảng trên.</div></div>
+
+<div class="card"><h2><span class="ico">📋</span>Bảng kết quả chi tiết</h2>
+ <div class="hint">👉 Bấm vào <b>tên con</b> để xem hồ sơ học tập đầy đủ:
+  biểu đồ tiến bộ qua các tháng, điểm từng bài kiểm tra, lịch đi học
+  và nhận xét riêng của thầy cô.</div>
+ <div class="scroll"><table><thead><tr><th>Hạng</th><th>Họ và tên</th><th>Trường</th><th>Đi học</th><th>Chuyên cần</th><th>Điểm thi</th><th>Bài tập</th><th>Điểm bài tập</th><th>Xếp loại</th><th>Điểm xếp hạng</th></tr></thead><tbody><tr><td><span style="font-size:17px">🥇</span></td><td><span class="nx" data-i="0">TRỊNH QUỐC BẢO DUY</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td><span class="tag g">9,75</span></td><td>11/11 <span class="ghi">100%</span></td><td>9,33</td><td><span class="tag g">Giỏi</span></td><td><span class="xh">9,69</span></td></tr><tr><td><span style="font-size:17px">🥈</span></td><td><span class="nx" data-i="1">PHẠM ĐÌNH BẢO NGỌC</span></td><td>NQ</td><td>8/8</td><td><span class="tag g">100%</span></td><td><span class="tag g">9,75</span></td><td>11/11 <span class="ghi">100%</span></td><td>8,77</td><td><span class="tag g">Giỏi</span></td><td><span class="xh">9,58</span></td></tr><tr><td><span style="font-size:17px">🥉</span></td><td><span class="nx" data-i="2">MAI HÀ BẮC</span></td><td>NQ</td><td>8/8</td><td><span class="tag g">100%</span></td><td><span class="tag g">9,38</span></td><td>10/11 <span class="ghi">90%</span></td><td>8,20</td><td><span class="tag g">Giỏi</span></td><td><span class="xh">9,21</span></td></tr><tr><td>4</td><td><span class="nx" data-i="3">NGUYỄN BẢO NAM</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>8,96</td><td>10/11 <span class="ghi">90%</span></td><td>8,11</td><td><span class="tag b">Khá</span></td><td><span class="xh">8,89</span></td></tr><tr><td>5</td><td><span class="nx" data-i="4">LÊ QUANG VINH</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>8,75</td><td>9/9 <span class="ghi">100%</span></td><td>8,61</td><td><span class="tag b">Khá</span></td><td><span class="xh">8,85</span></td></tr><tr><td>6</td><td><span class="nx" data-i="5">TRẦN DUY CÔNG</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>8,33</td><td>11/11 <span class="ghi">100%</span></td><td>9,39</td><td><span class="tag b">Khá</span></td><td><span class="xh">8,71</span></td></tr><tr><td>7</td><td><span class="nx" data-i="6">LÊ MINH PHÚC</span></td><td>ĐTĐ</td><td>8/8</td><td><span class="tag g">100%</span></td><td>8,43</td><td>11/11 <span class="ghi">100%</span></td><td>8,97</td><td><span class="tag b">Khá</span></td><td><span class="xh">8,70</span></td></tr><tr><td>8</td><td><span class="nx" data-i="7">TRẦN HÀ ANH</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>8,26</td><td>10/11 <span class="ghi">90%</span></td><td>8,47</td><td><span class="tag b">Khá</span></td><td><span class="xh">8,48</span></td></tr><tr><td>9</td><td><span class="nx" data-i="8">NGUYỄN PHƯƠNG CHI</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>8,33</td><td>9/11 <span class="ghi">81%</span></td><td>7,51</td><td><span class="tag b">Khá</span></td><td><span class="xh">8,33</span></td></tr><tr><td>10</td><td><span class="nx" data-i="9">VŨ GIA HUY</span></td><td>VL</td><td>8/8</td><td><span class="tag g">100%</span></td><td>7,42</td><td>11/11 <span class="ghi">100%</span></td><td>9,20</td><td>TB khá</td><td><span class="xh">8,03</span></td></tr><tr><td>11</td><td><span class="nx" data-i="10">DOÃN TRUNG KIÊN</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>7,96</td><td>9/11 <span class="ghi">81%</span></td><td>7,00</td><td>TB khá</td><td><span class="xh">7,97</span></td></tr><tr><td>12</td><td><span class="nx" data-i="11">NGUYỄN TUẤN DŨNG</span></td><td>HG</td><td>7/7</td><td><span class="tag g">100%</span></td><td>8,43</td><td>5/9 <span class="ghi">55%</span></td><td>4,89</td><td><span class="tag b">Khá</span></td><td><span class="xh">7,88</span></td></tr><tr><td>13</td><td><span class="nx" data-i="12">CAO HOÀNG VÂN GIANG</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>7,75</td><td>9/11 <span class="ghi">81%</span></td><td>6,66</td><td>TB khá</td><td><span class="xh">7,76</span></td></tr><tr><td>14</td><td><span class="nx" data-i="13">NGUYỄN THỊ KHÁNH LINH</span></td><td>VVH</td><td>8/8</td><td><span class="tag g">100%</span></td><td>7,04</td><td>11/11 <span class="ghi">100%</span></td><td>9,04</td><td>TB khá</td><td><span class="xh">7,74</span></td></tr><tr><td>15</td><td><span class="nx" data-i="14">NGUYỄN HOÀNG ANH</span></td><td>NQ</td><td>8/8</td><td><span class="tag g">100%</span></td><td><span class="tag g">9,50</span></td><td>0/11 <span class="ghi">0%</span></td><td><span class="tag r">0</span></td><td><span class="tag g">Giỏi</span></td><td><span class="xh">7,65</span></td></tr><tr><td>16</td><td><span class="nx" data-i="15">NGUYỄN TIẾN HÀ</span></td><td>HL</td><td>7/8</td><td><span class="tag g">88%</span></td><td>7,71</td><td>8/11 <span class="ghi">72%</span></td><td>6,01</td><td>TB khá</td><td><span class="xh">7,47</span></td></tr><tr><td>17</td><td><span class="nx" data-i="16">VŨ THÀNH ĐỨC</span></td><td>NQ</td><td>7/8</td><td><span class="tag g">88%</span></td><td>8,63</td><td>0/11 <span class="ghi">0%</span></td><td><span class="tag r">0</span></td><td><span class="tag b">Khá</span></td><td><span class="xh">6,92</span></td></tr><tr><td>18</td><td><span class="nx" data-i="17">VŨ TUẤN MINH</span></td><td>ĐTĐ</td><td>7/8</td><td><span class="tag g">88%</span></td><td>7,71</td><td>4/11 <span class="ghi">36%</span></td><td>2,97</td><td>TB khá</td><td><span class="xh">6,87</span></td></tr><tr><td>19</td><td><span class="nx" data-i="18">VŨ ĐỨC BẢO</span></td><td>LTT</td><td>7/7</td><td><span class="tag g">100%</span></td><td>8,13</td><td>0/9 <span class="ghi">0%</span></td><td><span class="tag r">0</span></td><td><span class="tag b">Khá</span></td><td><span class="xh">6,69</span></td></tr><tr><td>20</td><td><span class="nx" data-i="19">NGUYỄN NHÂN HIẾU</span></td><td>VL</td><td>8/8</td><td><span class="tag g">100%</span></td><td>8,08</td><td>0/11 <span class="ghi">0%</span></td><td><span class="tag r">0</span></td><td><span class="tag b">Khá</span></td><td><span class="xh">6,66</span></td></tr><tr><td>21</td><td><span class="nx" data-i="20">VĂN TIẾN ĐẠT</span></td><td>CHL</td><td>6/8</td><td><span class="tag a">75%</span></td><td>7,83</td><td>2/11 <span class="ghi">18%</span></td><td>1,62</td><td>TB khá</td><td><span class="xh">6,55</span></td></tr><tr><td>22</td><td><span class="nx" data-i="21">LƯƠNG YẾN NHI</span></td><td>ĐTĐ</td><td>7/8</td><td><span class="tag g">88%</span></td><td>7,13</td><td>4/11 <span class="ghi">36%</span></td><td>3,20</td><td>TB khá</td><td><span class="xh">6,51</span></td></tr><tr><td>23</td><td><span class="nx" data-i="22">TRẦN THÀNH LONG</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>6,43</td><td>6/11 <span class="ghi">54%</span></td><td>4,80</td><td>Trung bình</td><td><span class="xh">6,46</span></td></tr><tr><td>24</td><td><span class="nx" data-i="23">NGÔ ĐÌNH HOÀNH</span></td><td>ĐTĐ</td><td>7/8</td><td><span class="tag g">88%</span></td><td>7,38</td><td>2/11 <span class="ghi">18%</span></td><td>1,46</td><td>TB khá</td><td><span class="xh">6,33</span></td></tr><tr><td>25</td><td><span class="nx" data-i="24">PHẠM THÀNH TRUNG</span></td><td>VL</td><td>8/8</td><td><span class="tag g">100%</span></td><td>6,34</td><td>5/11 <span class="ghi">45%</span></td><td>3,99</td><td>Trung bình</td><td><span class="xh">6,24</span></td></tr><tr><td>26</td><td><span class="nx" data-i="25">ĐINH QUỲNH TÂM</span></td><td>ĐTĐ</td><td>7/8</td><td><span class="tag g">88%</span></td><td>7,63</td><td>0/11 <span class="ghi">0%</span></td><td><span class="tag r">0</span></td><td>TB khá</td><td><span class="xh">6,22</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="26">BÙI TRẦN CÔNG HOÀNG</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>—</td><td>11/11 <span class="ghi">100%</span></td><td>9,14</td><td><span class="muted">Chưa có điểm thi</span></td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="27">LÊ THỊ QUỲNH ANH</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>—</td><td>11/11 <span class="ghi">100%</span></td><td>8,60</td><td><span class="muted">Chưa có điểm thi</span></td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="28">LÊ THỊ ÁNH TUYẾT</span></td><td>NQ</td><td>7/7</td><td><span class="tag g">100%</span></td><td>—</td><td>1/8 <span class="ghi">12%</span></td><td>1,03</td><td><span class="muted">Chưa có điểm thi</span></td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="29">LẠI ĐOÀN ĐỨC LONG</span></td><td>HG</td><td>5/8</td><td><span class="tag a">62%</span></td><td>—</td><td>8/11 <span class="ghi">72%</span></td><td>6,41</td><td><span class="muted">Chưa có điểm thi</span></td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="30">MAI BÙI HUY HOÀNG</span></td><td>NQ</td><td>8/8</td><td><span class="tag g">100%</span></td><td>—</td><td>0/11 <span class="ghi">0%</span></td><td><span class="tag r">0</span></td><td><span class="muted">Chưa có điểm thi</span></td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="31">NGUYỄN HOÀNG NAM</span></td><td>LTT</td><td>8/8</td><td><span class="tag g">100%</span></td><td>—</td><td>0/11 <span class="ghi">0%</span></td><td><span class="tag r">0</span></td><td><span class="muted">Chưa có điểm thi</span></td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="32">NGUYỄN HUYỀN TRANG</span></td><td>VL</td><td>7/8</td><td><span class="tag g">88%</span></td><td>—</td><td>0/11 <span class="ghi">0%</span></td><td><span class="tag r">0</span></td><td><span class="muted">Chưa có điểm thi</span></td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="33">NGUYỄN HỮU QUYỀN</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>—</td><td>9/11 <span class="ghi">81%</span></td><td>6,64</td><td><span class="muted">Chưa có điểm thi</span></td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="34">NGUYỄN HỮU ĐẠT</span></td><td>HG</td><td>7/8</td><td><span class="tag g">88%</span></td><td>—</td><td>10/11 <span class="ghi">90%</span></td><td>8,29</td><td><span class="muted">Chưa có điểm thi</span></td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="35">NGUYỄN MINH DŨNG</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>—</td><td>9/11 <span class="ghi">81%</span></td><td>7,11</td><td><span class="muted">Chưa có điểm thi</span></td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="36">NGUYỄN QUỲNH ANH</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>—</td><td>6/11 <span class="ghi">54%</span></td><td>4,81</td><td><span class="muted">Chưa có điểm thi</span></td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="37">PHẠM MINH ANH</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>—</td><td>10/11 <span class="ghi">90%</span></td><td>8,53</td><td><span class="muted">Chưa có điểm thi</span></td><td><span class="muted">chưa xếp hạng</span></td></tr><tr><td><span class="muted">—</span></td><td><span class="nx" data-i="38">ĐỖ TUẤN HƯNG</span></td><td>HG</td><td>8/8</td><td><span class="tag g">100%</span></td><td>—</td><td>11/11 <span class="ghi">100%</span></td><td>9,17</td><td><span class="muted">Chưa có điểm thi</span></td><td><span class="muted">chưa xếp hạng</span></td></tr></tbody></table></div>
+ <div class="legend"><code>Điểm xếp hạng</code> = Điểm thi khảo sát (lớp mới khai giảng, chưa có điểm kiểm tra thường xuyên)<br><code>Chuyên cần</code> tính từ buổi con bắt đầu học, không tính các buổi trước khi vào lớp<br><code>Xếp loại</code> theo điểm thi: Giỏi ≥9,0 · Khá 8,0–8,9 · TB khá 6,5–7,9 · Trung bình 5,0–6,4 · Yếu &lt;5,0</div>
+</div>
+
+<div class="foot">Trung tâm Mapstudy Hạ Long · Tổng hợp ngày 05/11/2026<br>
+Nguồn: bảng điểm danh &amp; bảng điểm Tháng 10/2026 của giáo viên</div>
+</div>
+
+<div class="ov" id="ov">
+ <div class="dlg" role="dialog" aria-modal="true" aria-labelledby="dnm">
+  <div class="dh">
+   <div><div class="nm" id="dnm"></div><div class="mt" id="dmt"></div></div>
+   <button class="x" id="dx" aria-label="Đóng">&times;</button>
+  </div>
+  <div class="noi"><div class="ds" id="dds"></div>
+  <div class="db" id="ddb"></div></div>
+ </div>
+</div>
+
+<script>
+var HS = [{"ten": "TRỊNH QUỐC BẢO DUY", "nx": "Bảo Duy có điểm thi cao nhất lớp tháng này, 9,75, tăng hơn một điểm so với tháng 9. Cả tháng con không vắng buổi nào, mười một đề bài tập nộp đủ, điểm ở nhà cũng rất cao.", "thi": 9.75, "tbkt": null, "kt": [], "hang": 1, "siso": 39, "xl": "Giỏi", "xh": 9.69, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 8.29, "tb": 7.79, "hang": 13, "siso": 29, "lop": "12A"}, {"t": "Tháng 9/2026", "thi": 8.63, "tb": 7.46, "hang": 8, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 9.75, "tb": 8.12, "hang": 1, "siso": 39, "lop": "12D"}], "vt": {"pct": 96, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 3, "btl": "11/11", "btt": 100.0, "bttb": 9.33, "btd": 9.33, "btct": [["Đề số 11 lớp 12D", 9.17], ["Đề số 12 lớp 12D", 8.5], ["Đề số 13 lớp 12D", 9.75], ["Đề số 14 lớp 12D", 9.0], ["Đề số 15 lớp 12D", 9.5], ["Đề số 16 lớp 12D", 10.0], ["Đề số 17 lớp 12D", 9.75], ["Đề số 18 lớp 12D", 9.25], ["Đề số 19 lớp 12D", 9.75], ["Đề số 20 lớp 12D", 8.5], ["Đề số 21 lớp 12D", 9.5]], "thi_giua": null, "bu": false}, {"ten": "PHẠM ĐÌNH BẢO NGỌC", "nx": "Bảo Ngọc tiến rất nhanh: tháng 9 con được 7,21, bài khảo sát tháng này đã lên 9,75, là điểm thi cao nhất lớp. Tháng trước điểm thi của con còn thấp hơn điểm bài tập, tháng này thì đã vượt lên. Con đi học đủ, bài tập không thiếu đề nào.", "thi": 9.75, "tbkt": null, "kt": [], "hang": 2, "siso": 39, "xl": "Giỏi", "xh": 9.58, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 7.0, "tb": 6.98, "hang": 12, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 7.21, "tb": 7.46, "hang": 15, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 9.75, "tb": 8.12, "hang": 2, "siso": 39, "lop": "12D"}], "vt": {"pct": 96, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "11/11", "btt": 100.0, "bttb": 8.77, "btd": 8.77, "btct": [["Đề số 11 lớp 12D", 8.33], ["Đề số 12 lớp 12D", 9.25], ["Đề số 13 lớp 12D", 7.0], ["Đề số 14 lớp 12D", 9.0], ["Đề số 15 lớp 12D", 8.0], ["Đề số 16 lớp 12D", 9.0], ["Đề số 17 lớp 12D", 8.1], ["Đề số 18 lớp 12D", 8.0], ["Đề số 19 lớp 12D", 9.75], ["Đề số 20 lớp 12D", 10.0], ["Đề số 21 lớp 12D", 10.0]], "thi_giua": null, "bu": false}, {"ten": "MAI HÀ BẮC", "nx": "Hà Bắc lên 9,38 trong bài khảo sát tháng 10, cao hơn hẳn mức 7,8 của tháng trước. Bài tập con chỉ sót đúng một đề, còn những đề đã nộp thì điểm rất cao.", "thi": 9.38, "tbkt": null, "kt": [], "hang": 3, "siso": 39, "xl": "Giỏi", "xh": 9.21, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 7.75, "tb": 6.98, "hang": 19, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 7.8, "tb": 7.46, "hang": 18, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 9.38, "tb": 8.12, "hang": 3, "siso": 39, "lop": "12D"}], "vt": {"pct": 88, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "10/11", "btt": 90.9, "bttb": 9.02, "btd": 8.2, "btct": [["Đề số 11 lớp 12D", 7.18], ["Đề số 12 lớp 12D", 9.0], ["Đề số 13 lớp 12D", 10.0], ["Đề số 14 lớp 12D", 9.25], ["Đề số 15 lớp 12D", 9.25], ["Đề số 16 lớp 12D", 9.5], ["Đề số 17 lớp 12D", 9.0], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", 8.25], ["Đề số 20 lớp 12D", 9.25], ["Đề số 21 lớp 12D", 9.5]], "thi_giua": null, "bu": false}, {"ten": "NGUYỄN BẢO NAM", "nx": "Từ 7,67 của tháng 9, Bảo Nam đã lên 8,96 ở bài khảo sát tháng này. Con đi học đủ, bài tập về nhà chỉ còn thiếu một đề, và giờ điểm thi đã gần bằng điểm bài tập.", "thi": 8.96, "tbkt": null, "kt": [], "hang": 4, "siso": 39, "xl": "Khá", "xh": 8.89, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 7/2026", "thi": 8.75, "tb": 8.06, "hang": 8, "siso": 42, "lop": "12B"}, {"t": "Tháng 8/2026", "thi": 7.78, "tb": 7.52, "hang": 24, "siso": 45, "lop": "12B"}, {"t": "Tháng 9/2026", "thi": 7.67, "tb": 7.46, "hang": 17, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 8.96, "tb": 8.12, "hang": 4, "siso": 39, "lop": "12D"}], "vt": {"pct": 84, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 3, "btl": "10/11", "btt": 90.9, "bttb": 8.92, "btd": 8.11, "btct": [["Đề số 11 lớp 12D", 9.17], ["Đề số 12 lớp 12D", 7.25], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", 9.0], ["Đề số 15 lớp 12D", 9.25], ["Đề số 16 lớp 12D", 9.5], ["Đề số 17 lớp 12D", 8.0], ["Đề số 18 lớp 12D", 9.5], ["Đề số 19 lớp 12D", 8.25], ["Đề số 20 lớp 12D", 9.25], ["Đề số 21 lớp 12D", 10.0]], "thi_giua": null, "bu": false}, {"ten": "LÊ QUANG VINH", "nx": "Quang Vinh mới vào lớp từ ngày 5/10 nhưng đã rất nề nếp: con đi học đúng giờ, đủ cả tám buổi, chín đề bài tập về nhà đều hoàn thành. Bài khảo sát đầu tiên của con ở lớp được 8,75.", "thi": 8.75, "tbkt": null, "kt": [], "hang": 5, "siso": 39, "xl": "Khá", "xh": 8.85, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 10/2026", "thi": 8.75, "tb": 8.12, "hang": 5, "siso": 39, "lop": "12D"}], "vt": {"pct": 80, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 0, "btl": "9/9", "btt": 100.0, "bttb": 8.61, "btd": 8.61, "btct": [["Đề số 13 lớp 12D", 7.75], ["Đề số 14 lớp 12D", 8.25], ["Đề số 15 lớp 12D", 9.75], ["Đề số 16 lớp 12D", 8.75], ["Đề số 17 lớp 12D", 9.75], ["Đề số 18 lớp 12D", 9.25], ["Đề số 19 lớp 12D", 8.25], ["Đề số 20 lớp 12D", 8.75], ["Đề số 21 lớp 12D", 7.0]], "thi_giua": null, "bu": false}, {"ten": "TRẦN DUY CÔNG", "nx": "Tháng trước thầy cô chưa thấy bài tập nào của Duy Công, tháng này con đã nộp đủ cả mười một đề, điểm lại rất cao. Bài khảo sát được 8,33, gần như giữ mức tháng 9.", "thi": 8.33, "tbkt": null, "kt": [], "hang": 6, "siso": 39, "xl": "Khá", "xh": 8.71, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 9/2026", "thi": 8.04, "tb": 7.46, "hang": 22, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 8.33, "tb": 8.12, "hang": 6, "siso": 39, "lop": "12D"}], "vt": {"pct": 60, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 1, "btl": "11/11", "btt": 100.0, "bttb": 9.39, "btd": 9.39, "btct": [["Đề số 11 lớp 12D", 9.0], ["Đề số 12 lớp 12D", 9.75], ["Đề số 13 lớp 12D", 9.5], ["Đề số 14 lớp 12D", 9.0], ["Đề số 15 lớp 12D", 9.5], ["Đề số 16 lớp 12D", 9.5], ["Đề số 17 lớp 12D", 9.5], ["Đề số 18 lớp 12D", 9.0], ["Đề số 19 lớp 12D", 8.5], ["Đề số 20 lớp 12D", 10.0], ["Đề số 21 lớp 12D", 10.0]], "thi_giua": null, "bu": false}, {"ten": "LÊ MINH PHÚC", "nx": "Minh Phúc tháng này vẫn đi học đủ buổi, đề bài tập nào cũng nộp. Bài khảo sát tháng 10 con được 8,43, lên lại sau lần thi tháng 9 chưa như ý.", "thi": 8.43, "tbkt": null, "kt": [], "hang": 7, "siso": 39, "xl": "Khá", "xh": 8.7, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 8.25, "tb": 6.98, "hang": 6, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 6.61, "tb": 7.46, "hang": 21, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 8.43, "tb": 8.12, "hang": 7, "siso": 39, "lop": "12D"}], "vt": {"pct": 68, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "11/11", "btt": 100.0, "bttb": 8.97, "btd": 8.97, "btct": [["Đề số 11 lớp 12D", 7.18], ["Đề số 12 lớp 12D", 9.25], ["Đề số 13 lớp 12D", 10.0], ["Đề số 14 lớp 12D", 9.25], ["Đề số 15 lớp 12D", 9.25], ["Đề số 16 lớp 12D", 9.5], ["Đề số 17 lớp 12D", 9.0], ["Đề số 18 lớp 12D", 8.0], ["Đề số 19 lớp 12D", 8.25], ["Đề số 20 lớp 12D", 9.5], ["Đề số 21 lớp 12D", 9.5]], "thi_giua": null, "bu": false}, {"ten": "TRẦN HÀ ANH", "nx": "Tháng 10 Hà Anh trở lại học đều, buổi nào cũng có mặt, bài tập làm gần hết và đề nào nộp cũng được điểm cao. Bài khảo sát con được 8,26, cao hơn lần thi tháng 8. Phần kiến thức của những buổi lỡ hồi tháng 9, con nên tranh thủ xem lại cho chắc.", "thi": 8.26, "tbkt": null, "kt": [], "hang": 8, "siso": 39, "xl": "Khá", "xh": 8.48, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 7.1, "tb": 6.98, "hang": 15, "siso": 31, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 8.26, "tb": 8.12, "hang": 8, "siso": 39, "lop": "12D"}], "vt": {"pct": 56, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "10/11", "btt": 90.9, "bttb": 9.32, "btd": 8.47, "btct": [["Đề số 11 lớp 12D", 8.5], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", 9.25], ["Đề số 14 lớp 12D", 8.5], ["Đề số 15 lớp 12D", 9.25], ["Đề số 16 lớp 12D", 9.5], ["Đề số 17 lớp 12D", 9.5], ["Đề số 18 lớp 12D", 9.0], ["Đề số 19 lớp 12D", 9.75], ["Đề số 20 lớp 12D", 10.0], ["Đề số 21 lớp 12D", 10.0]], "thi_giua": null, "bu": false}, {"ten": "NGUYỄN PHƯƠNG CHI", "nx": "Phương Chi đi học đủ buổi, chín đề bài tập đã nộp đều làm tốt, chỉ còn hai đề để trống. Bài khảo sát tháng này con được 8,33, tăng khá rõ so với tháng 9. Hai đề còn trống con nên làm bù, coi như ôn lại phần kiến thức ấy luôn.", "thi": 8.33, "tbkt": null, "kt": [], "hang": 9, "siso": 39, "xl": "Khá", "xh": 8.33, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 8.75, "tb": 6.98, "hang": 2, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 7.46, "tb": 7.46, "hang": 18, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 8.33, "tb": 8.12, "hang": 9, "siso": 39, "lop": "12D"}], "vt": {"pct": 60, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "9/11", "btt": 81.8, "bttb": 9.18, "btd": 7.51, "btct": [["Đề số 11 lớp 12D", 8.58], ["Đề số 12 lớp 12D", 7.75], ["Đề số 13 lớp 12D", 8.75], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", 8.5], ["Đề số 17 lớp 12D", 9.75], ["Đề số 18 lớp 12D", 10.0], ["Đề số 19 lớp 12D", 10.0], ["Đề số 20 lớp 12D", 10.0], ["Đề số 21 lớp 12D", 9.25]], "thi_giua": null, "bu": false}, {"ten": "VŨ GIA HUY", "nx": "Gia Huy đã nộp đủ toàn bộ đề bài tập của tháng 10 và được điểm cao, đúng điều tháng trước thầy cô còn nhắc. Con cũng đi học đủ, không vắng hôm nào. Riêng bài khảo sát tháng 10 con chỉ được 7,42, thấp hơn nhiều so với 8,96 của tháng 9. Bài thi lần này con nên xem lại từng câu sai, ghi riêng những dạng bị mất điểm để ôn trước đợt sau.", "thi": 7.42, "tbkt": null, "kt": [], "hang": 10, "siso": 39, "xl": "TB khá", "xh": 8.03, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 7.25, "tb": 6.98, "hang": 16, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 8.96, "tb": 7.46, "hang": 4, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 7.42, "tb": 8.12, "hang": 10, "siso": 39, "lop": "12D"}], "vt": {"pct": 20, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "11/11", "btt": 100.0, "bttb": 9.2, "btd": 9.2, "btct": [["Đề số 11 lớp 12D", 7.92], ["Đề số 12 lớp 12D", 7.25], ["Đề số 13 lớp 12D", 8.5], ["Đề số 14 lớp 12D", 9.0], ["Đề số 15 lớp 12D", 9.0], ["Đề số 16 lớp 12D", 10.0], ["Đề số 17 lớp 12D", 10.0], ["Đề số 18 lớp 12D", 10.0], ["Đề số 19 lớp 12D", 9.75], ["Đề số 20 lớp 12D", 10.0], ["Đề số 21 lớp 12D", 9.75]], "thi_giua": null, "bu": false}, {"ten": "DOÃN TRUNG KIÊN", "nx": "Trung Kiên đi học đều, bài tập nộp được chín trên mười một đề. Điểm khảo sát tháng 10 là 7,96, xấp xỉ tháng trước. Tuần này con nên làm bù hai đề còn thiếu.", "thi": 7.96, "tbkt": null, "kt": [], "hang": 11, "siso": 39, "xl": "TB khá", "xh": 7.97, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 6.35, "tb": 6.98, "hang": 21, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 7.71, "tb": 7.46, "hang": 9, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 7.96, "tb": 8.12, "hang": 11, "siso": 39, "lop": "12D"}], "vt": {"pct": 44, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "9/11", "btt": 81.8, "bttb": 8.56, "btd": 7.0, "btct": [["Đề số 11 lớp 12D", 8.5], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", 6.0], ["Đề số 14 lớp 12D", 7.25], ["Đề số 15 lớp 12D", 9.5], ["Đề số 16 lớp 12D", 9.5], ["Đề số 17 lớp 12D", 8.5], ["Đề số 18 lớp 12D", 9.25], ["Đề số 19 lớp 12D", 8.5], ["Đề số 20 lớp 12D", 10.0], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "NGUYỄN TUẤN DŨNG", "nx": "Tuấn Dũng vào lớp từ ngày 8/10, từ hôm đó đến nay con chưa vắng buổi nào. Bài khảo sát đầu tiên cùng lớp con được 8,43, năm đề bài tập đã nộp cũng được điểm cao. Mấy đề giao trước hôm con vào lớp, con nên làm dần từng đề để nắm nốt phần các bạn đã học.", "thi": 8.43, "tbkt": null, "kt": [], "hang": 12, "siso": 39, "xl": "Khá", "xh": 7.88, "cc": 100, "comat": 7, "mauso": 7, "buoi": ["-", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 10/2026", "thi": 8.43, "tb": 8.12, "hang": 12, "siso": 39, "lop": "12D"}], "vt": {"pct": 68, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 0, "btl": "5/9", "btt": 55.6, "bttb": 8.8, "btd": 4.89, "btct": [["Đề số 13 lớp 12D", 8.0], ["Đề số 14 lớp 12D", 8.5], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", 8.75], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", 9.5], ["Đề số 21 lớp 12D", 9.25]], "thi_giua": null, "bu": false}, {"ten": "CAO HOÀNG VÂN GIANG", "nx": "Vân Giang được 7,75 ở bài khảo sát tháng 10, cũng là lần đầu con thi cùng lớp. Bài tập con nộp chín trên mười một đề. Hai đề còn lại con làm nốt, chỗ nào chưa hiểu thì hỏi luôn trên lớp.", "thi": 7.75, "tbkt": null, "kt": [], "hang": 13, "siso": 39, "xl": "TB khá", "xh": 7.76, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 10/2026", "thi": 7.75, "tb": 8.12, "hang": 13, "siso": 39, "lop": "12D"}], "vt": {"pct": 36, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 1, "btl": "9/11", "btt": 81.8, "bttb": 8.14, "btd": 6.66, "btct": [["Đề số 11 lớp 12D", 6.52], ["Đề số 12 lớp 12D", 9.0], ["Đề số 13 lớp 12D", 5.75], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", 8.0], ["Đề số 17 lớp 12D", 8.0], ["Đề số 18 lớp 12D", 7.25], ["Đề số 19 lớp 12D", 8.75], ["Đề số 20 lớp 12D", 10.0], ["Đề số 21 lớp 12D", 10.0]], "thi_giua": null, "bu": false}, {"ten": "NGUYỄN THỊ KHÁNH LINH", "nx": "Khánh Linh được 7,04 trong bài khảo sát tháng 10, trong khi tháng 9 con mới ở 5,09. Con vẫn chăm như trước: đi học đủ, nộp đủ mười một đề bài tập, điểm đều cao.", "thi": 7.04, "tbkt": null, "kt": [], "hang": 14, "siso": 39, "xl": "TB khá", "xh": 7.74, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 4.35, "tb": 6.98, "hang": 26, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 5.09, "tb": 7.46, "hang": 26, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 7.04, "tb": 8.12, "hang": 14, "siso": 39, "lop": "12D"}], "vt": {"pct": 8, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "11/11", "btt": 100.0, "bttb": 9.04, "btd": 9.04, "btct": [["Đề số 11 lớp 12D", 8.17], ["Đề số 12 lớp 12D", 8.5], ["Đề số 13 lớp 12D", 9.25], ["Đề số 14 lớp 12D", 9.25], ["Đề số 15 lớp 12D", 9.5], ["Đề số 16 lớp 12D", 9.75], ["Đề số 17 lớp 12D", 8.5], ["Đề số 18 lớp 12D", 9.75], ["Đề số 19 lớp 12D", 9.25], ["Đề số 20 lớp 12D", 10.0], ["Đề số 21 lớp 12D", 7.5]], "thi_giua": null, "bu": false}, {"ten": "NGUYỄN HOÀNG ANH", "nx": "Bài khảo sát tháng 10 của Hoàng Anh được 9,5, tăng rất mạnh so với tháng trước. Tuy vậy, cả tháng con vẫn chưa nộp đề bài tập về nhà nào trên hệ thống, đây là tháng thứ hai liên tiếp. Gia đình kiểm tra giúp và nhắc con nộp bài hằng tuần.", "thi": 9.5, "tbkt": null, "kt": [], "hang": 15, "siso": 39, "xl": "Giỏi", "xh": 7.65, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 9/2026", "thi": 7.8, "tb": 7.46, "hang": 25, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 9.5, "tb": 8.12, "hang": 15, "siso": 39, "lop": "12D"}], "vt": {"pct": 92, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "0/11", "btt": 0.0, "bttb": null, "btd": 0.0, "btct": [["Đề số 11 lớp 12D", null], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "NGUYỄN TIẾN HÀ", "nx": "Tiến Hà được 7,71 ở bài khảo sát tháng 10, gần như không đổi so với tháng 9. Tháng này con nghỉ một buổi có xin phép, bài tập nộp được tám trên mười một đề. Ba đề còn để trống, con làm nốt trước khi lớp sang chương mới.", "thi": 7.71, "tbkt": null, "kt": [], "hang": 16, "siso": 39, "xl": "TB khá", "xh": 7.47, "cc": 88, "comat": 7, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "P"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": ["29"], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 8.5, "tb": 6.98, "hang": 7, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 7.83, "tb": 7.46, "hang": 10, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 7.71, "tb": 8.12, "hang": 16, "siso": 39, "lop": "12D"}], "vt": {"pct": 28, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "8/11", "btt": 72.7, "bttb": 8.27, "btd": 6.01, "btct": [["Đề số 11 lớp 12D", 7.18], ["Đề số 12 lớp 12D", 7.25], ["Đề số 13 lớp 12D", 8.25], ["Đề số 14 lớp 12D", 9.25], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", 8.0], ["Đề số 17 lớp 12D", 8.5], ["Đề số 18 lớp 12D", 9.25], ["Đề số 19 lớp 12D", 8.5], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "VŨ THÀNH ĐỨC", "nx": "Điểm thi của Thành Đức vẫn đi lên, tháng 10 được 8,63, so với 7,17 của tháng trước. Còn bài tập về nhà thì đã hai tháng con chưa nộp đề nào. Tháng này con nghỉ một buổi có xin phép. Từ tuần tới con làm đề nào thì nộp ngay đề đó.", "thi": 8.63, "tbkt": null, "kt": [], "hang": 17, "siso": 39, "xl": "Khá", "xh": 6.92, "cc": 88, "comat": 7, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "P"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": ["29"], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 5.5, "tb": 6.98, "hang": 22, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 7.17, "tb": 7.46, "hang": 27, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 8.63, "tb": 8.12, "hang": 17, "siso": 39, "lop": "12D"}], "vt": {"pct": 76, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "0/11", "btt": 0.0, "bttb": null, "btd": 0.0, "btct": [["Đề số 11 lớp 12D", null], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "VŨ TUẤN MINH", "nx": "Bài tập về nhà là phần Tuấn Minh cần tăng lên nhất: tháng này con mới nộp bốn đề, dù những đề đã làm đều được điểm khá. Bài khảo sát con được 7,71, giảm so với 8,3 của tháng 9. Cuối tháng con có xin nghỉ một buổi.", "thi": 7.71, "tbkt": null, "kt": [], "hang": 18, "siso": 39, "xl": "TB khá", "xh": 6.87, "cc": 88, "comat": 7, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "P"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": ["29"], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 6.25, "tb": 6.98, "hang": 20, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 8.3, "tb": 7.46, "hang": 16, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 7.71, "tb": 8.12, "hang": 18, "siso": 39, "lop": "12D"}], "vt": {"pct": 28, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "4/11", "btt": 36.4, "bttb": 8.15, "btd": 2.97, "btct": [["Đề số 11 lớp 12D", null], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", 6.5], ["Đề số 15 lớp 12D", 9.5], ["Đề số 16 lớp 12D", 9.25], ["Đề số 17 lớp 12D", 7.35], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "VŨ ĐỨC BẢO", "nx": "Đức Bảo mới học cùng lớp từ đầu tháng 10 và chưa bỏ buổi học nào. Ngay bài khảo sát đầu tiên con đã được 8,13. Riêng bài tập thì con chưa nộp đề nào. Con hỏi các bạn cách nộp bài, rồi nộp luôn từ đề tuần tới.", "thi": 8.13, "tbkt": null, "kt": [], "hang": 19, "siso": 39, "xl": "Khá", "xh": 6.69, "cc": 100, "comat": 7, "mauso": 7, "buoi": ["-", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 10/2026", "thi": 8.13, "tb": 8.12, "hang": 19, "siso": 39, "lop": "12D"}], "vt": {"pct": 52, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 0, "btl": "0/9", "btt": 0.0, "bttb": null, "btd": 0.0, "btct": [["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "NGUYỄN NHÂN HIẾU", "nx": "Tháng 9 Nhân Hiếu nộp bài tập đủ, nhưng tháng này con chưa nộp đề nào. Con vẫn đi học đủ buổi, bài khảo sát được 8,08, thấp hơn tháng trước nửa điểm. Sang tháng 11, con cố nộp bài đều trở lại như hồi tháng 9.", "thi": 8.08, "tbkt": null, "kt": [], "hang": 20, "siso": 39, "xl": "Khá", "xh": 6.66, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 7.75, "tb": 6.98, "hang": 7, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 8.58, "tb": 7.46, "hang": 3, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 8.08, "tb": 8.12, "hang": 20, "siso": 39, "lop": "12D"}], "vt": {"pct": 48, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "0/11", "btt": 0.0, "bttb": null, "btd": 0.0, "btct": [["Đề số 11 lớp 12D", null], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "VĂN TIẾN ĐẠT", "nx": "Tiến Đạt nghỉ hai buổi đầu tháng, đều có phép. Lần khảo sát này con được 7,83, thấp hơn lần thi tháng 8. Bài tập về nhà mới có hai đề, cả hai đều làm tốt, nên thầy cô mong con nộp nhiều hơn ở những tuần tới.", "thi": 7.83, "tbkt": null, "kt": [], "hang": 21, "siso": 39, "xl": "TB khá", "xh": 6.55, "cc": 75, "comat": 6, "mauso": 8, "buoi": ["P", "P", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": ["5", "8"], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 8.5, "tb": 6.98, "hang": 11, "siso": 31, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 7.83, "tb": 8.12, "hang": 21, "siso": 39, "lop": "12D"}], "vt": {"pct": 40, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "2/11", "btt": 18.2, "bttb": 8.88, "btd": 1.62, "btct": [["Đề số 11 lớp 12D", null], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", 8.5], ["Đề số 21 lớp 12D", 9.25]], "thi_giua": null, "bu": false}, {"ten": "LƯƠNG YẾN NHI", "nx": "Tháng 9 Yến Nhi đề nào cũng làm, sang tháng 10 con mới nộp bốn đề. Bài khảo sát được 7,13, giảm so với tháng trước. Con nghỉ một buổi cuối tháng có phép. Tuần nào có đề mới, con cố làm và nộp ngay trong tuần.", "thi": 7.13, "tbkt": null, "kt": [], "hang": 22, "siso": 39, "xl": "TB khá", "xh": 6.51, "cc": 88, "comat": 7, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "P"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": ["29"], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 7.75, "tb": 6.98, "hang": 10, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 7.88, "tb": 7.46, "hang": 6, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 7.13, "tb": 8.12, "hang": 22, "siso": 39, "lop": "12D"}], "vt": {"pct": 12, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "4/11", "btt": 36.4, "bttb": 8.79, "btd": 3.2, "btct": [["Đề số 11 lớp 12D", 6.92], ["Đề số 12 lớp 12D", 8.5], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", 10.0], ["Đề số 16 lớp 12D", 9.75], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "TRẦN THÀNH LONG", "nx": "Thành Long tháng này không nghỉ buổi nào. Bài khảo sát tháng 10 con được 6,43, thấp hơn khá nhiều so với lần thi tháng 8. Những đề bài tập con làm ở nhà vẫn được điểm tốt, nhưng mới được hơn một nửa số đề. Con nên hỏi thầy cô từng câu sai trong bài thi để biết mình đang hổng ở chương nào, rồi ôn bù đúng phần ấy.", "thi": 6.43, "tbkt": null, "kt": [], "hang": 23, "siso": 39, "xl": "Trung bình", "xh": 6.46, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 7.55, "tb": 7.52, "hang": 30, "siso": 45, "lop": "12B"}, {"t": "Tháng 10/2026", "thi": 6.43, "tb": 8.12, "hang": 23, "siso": 39, "lop": "12D"}], "vt": {"pct": 4, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "6/11", "btt": 54.5, "bttb": 8.81, "btd": 4.8, "btct": [["Đề số 11 lớp 12D", null], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", 9.0], ["Đề số 15 lớp 12D", 10.0], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", 9.0], ["Đề số 19 lớp 12D", 8.5], ["Đề số 20 lớp 12D", 8.6], ["Đề số 21 lớp 12D", 7.75]], "thi_giua": null, "bu": false}, {"ten": "NGÔ ĐÌNH HOÀNH", "nx": "Gia đình để ý giúp thầy cô hai việc của Đình Hoành tháng này: buổi học ngày 29/10 con nghỉ mà không xin phép, và bài tập về nhà con mới nộp hai đề. Bài khảo sát được 7,38, giảm so với mức 8 của tháng 9. Bài hôm nghỉ, con cần mượn vở bạn chép lại cho đủ. Tháng 9 con làm bài rất đều, tháng này con nên quay lại cách ấy, mỗi tuần nộp đủ đề được giao.", "thi": 7.38, "tbkt": null, "kt": [], "hang": 24, "siso": 39, "xl": "TB khá", "xh": 6.33, "cc": 88, "comat": 7, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "K"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": ["29"], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 6.25, "tb": 6.98, "hang": 17, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 8.0, "tb": 7.46, "hang": 5, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 7.38, "tb": 8.12, "hang": 24, "siso": 39, "lop": "12D"}], "vt": {"pct": 16, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "2/11", "btt": 18.2, "bttb": 8.04, "btd": 1.46, "btct": [["Đề số 11 lớp 12D", 8.83], ["Đề số 12 lớp 12D", 7.25], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "PHẠM THÀNH TRUNG", "nx": "Tháng này Thành Trung đến lớp đều đặn, khác hẳn tháng trước. Bài khảo sát cũng đã lên 6,34, từ 5,18 của tháng 9. Những đề bài tập con nộp đều được điểm khá, chỉ là mới gần nửa số đề, nên con cần nộp thêm bài ở nhà cho đều như việc đi học.", "thi": 6.34, "tbkt": null, "kt": [], "hang": 25, "siso": 39, "xl": "Trung bình", "xh": 6.24, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 9/2026", "thi": 5.18, "tb": 7.46, "hang": 29, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 6.34, "tb": 8.12, "hang": 25, "siso": 39, "lop": "12D"}], "vt": {"pct": 0, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "5/11", "btt": 45.5, "bttb": 8.77, "btd": 3.99, "btct": [["Đề số 11 lớp 12D", null], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", 8.25], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", 7.6], ["Đề số 17 lớp 12D", 9.5], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", 9.0], ["Đề số 21 lớp 12D", 9.5]], "thi_giua": null, "bu": false}, {"ten": "ĐINH QUỲNH TÂM", "nx": "Điểm khảo sát tháng 10 của Quỳnh Tâm là 7,63, vẫn quanh mức tháng trước. Cả tháng con chỉ nghỉ một buổi có phép. Chỗ thầy cô lo là bài tập: tháng 9 con làm đều, điểm khá cao, nhưng tháng này chưa nộp đề nào. Con mở lại các đề tháng 10 và làm dần từ đề đầu tiên.", "thi": 7.63, "tbkt": null, "kt": [], "hang": 26, "siso": 39, "xl": "TB khá", "xh": 6.22, "cc": 88, "comat": 7, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "P"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": ["29"], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 8.5, "tb": 6.98, "hang": 4, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 7.83, "tb": 7.46, "hang": 14, "siso": 34, "lop": "12D"}, {"t": "Tháng 10/2026", "thi": 7.63, "tb": 8.12, "hang": 26, "siso": 39, "lop": "12D"}], "vt": {"pct": 24, "min": 6.34, "max": 9.75, "tb": 8.12}, "chi_thi": true, "cu": 2, "btl": "0/11", "btt": 0.0, "bttb": null, "btd": 0.0, "btct": [["Đề số 11 lớp 12D", null], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "BÙI TRẦN CÔNG HOÀNG", "nx": "Tháng này Công Hoàng học rất đều: không vắng buổi nào, nộp đủ mười một đề bài tập, điểm trung bình trên 9. Riêng bài khảo sát con chưa làm được vì trùng lịch ôn tập trên trường. Sang tháng 11, con nên sắp xếp dự bài khảo sát để thầy cô xem con tiến tới đâu so với tháng 9.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 39, "xl": "Chưa có điểm thi", "xh": null, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 4.35, "tb": 6.98, "hang": 24, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 5.71, "tb": 7.46, "hang": 24, "siso": 34, "lop": "12D"}], "vt": null, "chi_thi": true, "cu": 2, "btl": "11/11", "btt": 100.0, "bttb": 9.14, "btd": 9.14, "btct": [["Đề số 11 lớp 12D", 8.58], ["Đề số 12 lớp 12D", 8.25], ["Đề số 13 lớp 12D", 6.75], ["Đề số 14 lớp 12D", 9.5], ["Đề số 15 lớp 12D", 10.0], ["Đề số 16 lớp 12D", 9.25], ["Đề số 17 lớp 12D", 9.5], ["Đề số 18 lớp 12D", 9.75], ["Đề số 19 lớp 12D", 10.0], ["Đề số 20 lớp 12D", 9.0], ["Đề số 21 lớp 12D", 10.0]], "thi_giua": null, "bu": false}, {"ten": "LÊ THỊ QUỲNH ANH", "nx": "Quỳnh Anh bận ôn thi giữa kì ở trường nên lỡ bài khảo sát tháng này, còn ở lớp con vẫn đi học đủ và không sót đề bài tập nào. Điểm các đề ở nhà cũng khá cao.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 39, "xl": "Chưa có điểm thi", "xh": null, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 5.25, "tb": 6.98, "hang": 18, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 7.68, "tb": 7.46, "hang": 13, "siso": 34, "lop": "12D"}], "vt": null, "chi_thi": true, "cu": 2, "btl": "11/11", "btt": 100.0, "bttb": 8.6, "btd": 8.6, "btct": [["Đề số 11 lớp 12D", 6.75], ["Đề số 12 lớp 12D", 9.75], ["Đề số 13 lớp 12D", 9.5], ["Đề số 14 lớp 12D", 8.1], ["Đề số 15 lớp 12D", 9.75], ["Đề số 16 lớp 12D", 7.5], ["Đề số 17 lớp 12D", 9.5], ["Đề số 18 lớp 12D", 8.5], ["Đề số 19 lớp 12D", 8.5], ["Đề số 20 lớp 12D", 8.0], ["Đề số 21 lớp 12D", 8.75]], "thi_giua": null, "bu": false}, {"ten": "LÊ THỊ ÁNH TUYẾT", "nx": "Từ hôm nhập học, Ánh Tuyết chưa vắng buổi nào. Bài khảo sát tháng này con chưa làm, tháng 11 con nhớ dự cùng các bạn. Bài tập con mới nộp một đề, được điểm khá. Những tuần tới con cố nộp đều các đề mới.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 39, "xl": "Chưa có điểm thi", "xh": null, "cc": 100, "comat": 7, "mauso": 7, "buoi": ["-", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true, "cu": 0, "btl": "1/8", "btt": 12.5, "bttb": 8.25, "btd": 1.03, "btct": [["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", 8.25], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "LẠI ĐOÀN ĐỨC LONG", "nx": "Đầu tháng 10 Đức Long nghỉ ba buổi, đều có xin phép. Hôm khảo sát con lại phải ôn kiểm tra ở trường nên tháng này chưa có điểm. Bài tập thì con vẫn nộp được tám đề, điểm khá tốt. Ba buổi đã nghỉ, con nên xin lại tài liệu để tự học bù cho kịp lớp.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 39, "xl": "Chưa có điểm thi", "xh": null, "cc": 62, "comat": 5, "mauso": 8, "buoi": ["P", "P", "P", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": ["5", "8", "12"], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 8.5, "tb": 6.98, "hang": 9, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 7.88, "tb": 7.46, "hang": 20, "siso": 34, "lop": "12D"}], "vt": null, "chi_thi": true, "cu": 2, "btl": "8/11", "btt": 72.7, "bttb": 8.82, "btd": 6.41, "btct": [["Đề số 11 lớp 12D", 7.08], ["Đề số 12 lớp 12D", 9.75], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", 9.0], ["Đề số 15 lớp 12D", 10.0], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", 8.25], ["Đề số 19 lớp 12D", 8.75], ["Đề số 20 lớp 12D", 8.0], ["Đề số 21 lớp 12D", 9.75]], "thi_giua": null, "bu": false}, {"ten": "MAI BÙI HUY HOÀNG", "nx": "Huy Hoàng tháng này đi học đủ buổi, nhưng con không dự bài khảo sát và cả tháng chưa nộp đề bài tập nào trên hệ thống. Con cần chủ động hơn nhiều trong việc học, trước hết là dự bài khảo sát tháng 11 và tự làm, tự nộp đề bài tập hằng tuần. Ở nhà, gia đình nhắc con thêm để con tập trung và có trách nhiệm hơn với việc học.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 39, "xl": "Chưa có điểm thi", "xh": null, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 9/2026", "thi": 4.26, "tb": 7.46, "hang": 30, "siso": 34, "lop": "12D"}], "vt": null, "chi_thi": true, "cu": 2, "btl": "0/11", "btt": 0.0, "bttb": null, "btd": 0.0, "btct": [["Đề số 11 lớp 12D", null], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "NGUYỄN HOÀNG NAM", "nx": "Hoàng Nam tháng này vẫn đi học đầy đủ. Chỉ là đã hai tháng liền thầy cô chưa có điểm thi của con, bài tập về nhà cũng chưa nộp đề nào. Tháng 11 con sắp xếp dự khảo sát cùng lớp, và bắt đầu nộp bài từ những đề mới.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 39, "xl": "Chưa có điểm thi", "xh": null, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 6.0, "tb": 6.98, "hang": 23, "siso": 31, "lop": "12D"}], "vt": null, "chi_thi": true, "cu": 2, "btl": "0/11", "btt": 0.0, "bttb": null, "btd": 0.0, "btct": [["Đề số 11 lớp 12D", null], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "NGUYỄN HUYỀN TRANG", "nx": "Huyền Trang chưa dự được bài khảo sát tháng này vì có việc sức khỏe, thầy cô mong con đã khỏe hẳn. Cả tháng con chỉ nghỉ một buổi có phép. Bài tập về nhà thì tháng này con chưa nộp đề nào. Khi đã ổn hơn, con nên làm dần những đề còn thiếu, chỗ nào khó cứ nhắn thầy cô.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 39, "xl": "Chưa có điểm thi", "xh": null, "cc": 88, "comat": 7, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "P"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": ["29"], "gop": false, "dalop": null, "moc": [{"t": "Tháng 9/2026", "thi": 7.5, "tb": 7.46, "hang": 23, "siso": 34, "lop": "12D"}], "vt": null, "chi_thi": true, "cu": 2, "btl": "0/11", "btt": 0.0, "bttb": null, "btd": 0.0, "btct": [["Đề số 11 lớp 12D", null], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", null], ["Đề số 15 lớp 12D", null], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", null], ["Đề số 19 lớp 12D", null], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "NGUYỄN HỮU QUYỀN", "nx": "Hữu Quyền đi học đủ buổi, chín đề bài tập đã nộp, điểm khá. Tháng này con chưa có điểm khảo sát để so với mức 8,88 của tháng 9, vì hôm thi con bận ôn bài cho trường.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 39, "xl": "Chưa có điểm thi", "xh": null, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 7.0, "tb": 6.98, "hang": 13, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 8.88, "tb": 7.46, "hang": 2, "siso": 34, "lop": "12D"}], "vt": null, "chi_thi": true, "cu": 2, "btl": "9/11", "btt": 81.8, "bttb": 8.12, "btd": 6.64, "btct": [["Đề số 11 lớp 12D", 7.08], ["Đề số 12 lớp 12D", 8.25], ["Đề số 13 lớp 12D", 9.0], ["Đề số 14 lớp 12D", 8.25], ["Đề số 15 lớp 12D", 6.25], ["Đề số 16 lớp 12D", null], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", 8.25], ["Đề số 19 lớp 12D", 8.75], ["Đề số 20 lớp 12D", 8.25], ["Đề số 21 lớp 12D", 9.0]], "thi_giua": null, "bu": false}, {"ten": "NGUYỄN HỮU ĐẠT", "nx": "Bài tập về nhà là điểm sáng của Hữu Đạt tháng này: mười trên mười một đề đã nộp, điểm trung bình trên 9. Hôm khảo sát con xin vắng để dành thời gian ôn cho kì thi sắp tới bên trường, cuối tháng con cũng có xin nghỉ một buổi.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 39, "xl": "Chưa có điểm thi", "xh": null, "cc": 88, "comat": 7, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "P"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": ["29"], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 8.5, "tb": 6.98, "hang": 3, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 8.3, "tb": 7.46, "hang": 12, "siso": 34, "lop": "12D"}], "vt": null, "chi_thi": true, "cu": 2, "btl": "10/11", "btt": 90.9, "bttb": 9.12, "btd": 8.29, "btct": [["Đề số 11 lớp 12D", 7.75], ["Đề số 12 lớp 12D", 9.75], ["Đề số 13 lớp 12D", 9.5], ["Đề số 14 lớp 12D", 8.75], ["Đề số 15 lớp 12D", 9.5], ["Đề số 16 lớp 12D", 9.75], ["Đề số 17 lớp 12D", null], ["Đề số 18 lớp 12D", 8.75], ["Đề số 19 lớp 12D", 8.75], ["Đề số 20 lớp 12D", 9.0], ["Đề số 21 lớp 12D", 9.75]], "thi_giua": null, "bu": false}, {"ten": "NGUYỄN MINH DŨNG", "nx": "Minh Dũng học đều cả tháng: đủ buổi, chín đề bài tập, điểm khá đều. Bài khảo sát lần này con không dự vì phải chuẩn bị cho đợt thi trên trường.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 39, "xl": "Chưa có điểm thi", "xh": null, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 9.0, "tb": 6.98, "hang": 1, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 7.58, "tb": 7.46, "hang": 11, "siso": 34, "lop": "12D"}], "vt": null, "chi_thi": true, "cu": 2, "btl": "9/11", "btt": 81.8, "bttb": 8.69, "btd": 7.11, "btct": [["Đề số 11 lớp 12D", 8.0], ["Đề số 12 lớp 12D", 8.5], ["Đề số 13 lớp 12D", 9.0], ["Đề số 14 lớp 12D", 8.75], ["Đề số 15 lớp 12D", 9.5], ["Đề số 16 lớp 12D", 8.0], ["Đề số 17 lớp 12D", 8.5], ["Đề số 18 lớp 12D", 9.0], ["Đề số 19 lớp 12D", 9.0], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "NGUYỄN QUỲNH ANH", "nx": "Quỳnh Anh có mặt ở cả tám buổi học. Tháng 9 con thi được 9 điểm, nhưng tháng này con chưa có điểm khảo sát vì vắng hôm thi, đợt tới con cần thu xếp để không lỡ nữa. Bài tập về nhà con nộp được hơn một nửa, điểm các đề đều tốt, mấy đề còn lại con nên làm nốt.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 39, "xl": "Chưa có điểm thi", "xh": null, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [], "vt": null, "chi_thi": true, "cu": 0, "btl": "6/11", "btt": 54.5, "bttb": 8.83, "btd": 4.81, "btct": [["Đề số 11 lớp 12D", null], ["Đề số 12 lớp 12D", null], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", 9.0], ["Đề số 15 lớp 12D", 7.5], ["Đề số 16 lớp 12D", 9.25], ["Đề số 17 lớp 12D", 9.25], ["Đề số 18 lớp 12D", 9.25], ["Đề số 19 lớp 12D", 8.75], ["Đề số 20 lớp 12D", null], ["Đề số 21 lớp 12D", null]], "thi_giua": null, "bu": false}, {"ten": "PHẠM MINH ANH", "nx": "Minh Anh đi học đủ, bài tập chỉ thiếu một đề, những đề đã nộp đều được điểm rất cao. Bài khảo sát tháng này con xin nghỉ để học cho đợt kiểm tra của trường, nên chưa có điểm.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 39, "xl": "Chưa có điểm thi", "xh": null, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 8.0, "tb": 6.98, "hang": 5, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 8.25, "tb": 7.46, "hang": 1, "siso": 34, "lop": "12D"}], "vt": null, "chi_thi": true, "cu": 2, "btl": "10/11", "btt": 90.9, "bttb": 9.38, "btd": 8.53, "btct": [["Đề số 11 lớp 12D", 8.58], ["Đề số 12 lớp 12D", 8.5], ["Đề số 13 lớp 12D", null], ["Đề số 14 lớp 12D", 9.25], ["Đề số 15 lớp 12D", 10.0], ["Đề số 16 lớp 12D", 9.5], ["Đề số 17 lớp 12D", 9.75], ["Đề số 18 lớp 12D", 9.75], ["Đề số 19 lớp 12D", 8.5], ["Đề số 20 lớp 12D", 10.0], ["Đề số 21 lớp 12D", 10.0]], "thi_giua": null, "bu": false}, {"ten": "ĐỖ TUẤN HƯNG", "nx": "Tuấn Hưng không bỏ buổi học nào, mười một đề bài tập nộp đủ, điểm rất cao. Riêng bài khảo sát tháng này con xin vắng, vì trùng tuần con ôn thi giữa kì.", "thi": null, "tbkt": null, "kt": [], "hang": null, "siso": 39, "xl": "Chưa có điểm thi", "xh": null, "cc": 100, "comat": 8, "mauso": 8, "buoi": ["X", "X", "X", "X", "X", "X", "X", "X"], "ngay": ["5", "8", "12", "15", "19", "22", "26", "29"], "nv": [], "gop": false, "dalop": null, "moc": [{"t": "Tháng 8/2026", "thi": 6.5, "tb": 6.98, "hang": 14, "siso": 31, "lop": "12D"}, {"t": "Tháng 9/2026", "thi": 7.79, "tb": 7.46, "hang": 7, "siso": 34, "lop": "12D"}], "vt": null, "chi_thi": true, "cu": 2, "btl": "11/11", "btt": 100.0, "bttb": 9.17, "btd": 9.17, "btct": [["Đề số 11 lớp 12D", 7.08], ["Đề số 12 lớp 12D", 9.75], ["Đề số 13 lớp 12D", 9.0], ["Đề số 14 lớp 12D", 9.5], ["Đề số 15 lớp 12D", 9.5], ["Đề số 16 lớp 12D", 9.5], ["Đề số 17 lớp 12D", 9.75], ["Đề số 18 lớp 12D", 9.25], ["Đề số 19 lớp 12D", 8.5], ["Đề số 20 lớp 12D", 9.0], ["Đề số 21 lớp 12D", 10.0]], "thi_giua": null, "bu": false}];
+var ov = document.getElementById('ov');
+function esc(s){var d=document.createElement('div');d.textContent=s==null?'':s;return d.innerHTML;}
+function sv(v){return v==null?'—':v.toFixed(2).replace('.',',');}
+function sg(v){return v==null?'—':(v.toFixed(2).replace(/0+$/,'').replace(/\.$/,'')).replace('.',',');}
+
+/* ---- 1. BIEU DO DIEM THI QUA CAC THANG ---- */
+function veTienBo(h){
+  if((!h.moc || h.moc.length<2) && h.cu){
+    /* Em DA hoc thang truoc nhung chua du 2 thang co diem thi -> KHONG duoc
+       noi "thang dau tien" (sai su that, T9 bat duoc o 12G). */
+    return '<div class="kh"><h3>📈 Tiến bộ qua các tháng</h3>'
+     +'<div class="note">Con chưa có đủ điểm thi của hai tháng để vẽ biểu đồ tiến bộ. '
+     +'Mục này sẽ hiện khi con có thêm điểm thi ở các tháng tiếp theo.</div></div>';
+  }
+  if(!h.moc || h.moc.length<2){
+    return '<div class="kh"><h3>📈 Tiến bộ qua các tháng</h3>'
+     +'<div class="note">Đây là <b>tháng đầu tiên</b> con học tại trung tâm nên chưa có '
+     +'tháng trước để so sánh. Từ tháng sau, mục này sẽ hiện biểu đồ tiến bộ của con.</div></div>';
+  }
+  var W=100, n=h.moc.length;
+  var pts=h.moc.map(function(m,i){
+    return {x: n===1?50:(i/(n-1))*W, y: m.thi, tb:m.tb, t:m.t, hang:m.hang, siso:m.siso};
+  });
+  /* Thang TU CO theo du lieu that. Co dinh 4..10 thi chenh 0,25 diem bi nen
+     thanh duong phang, phu huynh khong thay tien bo dau ca. */
+  var vals=[]; pts.forEach(function(p){vals.push(p.y); if(p.tb!=null)vals.push(p.tb);});
+  var lo=Math.min.apply(null,vals), hi=Math.max.apply(null,vals);
+  var bien=Math.max(0.55,(hi-lo)*0.42);        /* dem tren duoi cho de nhin */
+  var y0=Math.max(0,lo-bien), y1=Math.min(10,hi+bien);
+  if(y1-y0<1.1){ var g=(1.1-(y1-y0))/2; y0=Math.max(0,y0-g); y1=Math.min(10,y1+g); }
+  function ty(v){ return 100 - ((v-y0)/(y1-y0))*100; }
+  var dCon='', dTb='';
+  pts.forEach(function(p,i){
+    dCon += (i?' L':'M')+p.x.toFixed(1)+' '+ty(p.y).toFixed(1);
+    if(p.tb!=null) dTb += (i?' L':'M')+p.x.toFixed(1)+' '+ty(p.tb).toFixed(1);
+  });
+  var cham='';
+  pts.forEach(function(p){
+    cham += '<circle cx="'+p.x.toFixed(1)+'" cy="'+ty(p.y).toFixed(1)
+         +'" r="3.4" fill="#152a4e" stroke="#fff" stroke-width="1.6"/>';
+  });
+  var dau=pts[0].y, cuoi=pts[pts.length-1].y, ch=cuoi-dau;
+  var mui = ch>0.05 ? '<span class="tag g">▲ tăng '+sg(ch)+' điểm</span>'
+          : (ch<-0.05 ? '<span class="tag a">▼ giảm '+sg(-ch)+' điểm</span>'
+          : '<span class="tag b">■ giữ nguyên</span>');
+  var nhan='', bang='';
+  pts.forEach(function(p){
+    nhan += '<span style="flex:1;text-align:center;font-size:10.5px;color:#5a6b80;'
+         +'font-weight:600">'+esc(p.t)+'</span>';
+    bang += '<tr><td style="text-align:left;padding:6px 4px;font-size:12.5px">'+esc(p.t)+'</td>'
+         +'<td style="padding:6px 4px;font-weight:700;font-size:13px">'+sv(p.y)+'</td>'
+         +'<td style="padding:6px 4px;color:#5a6b80;font-size:12.5px">'+sv(p.tb)+'</td>'
+         +'<td style="padding:6px 4px;font-size:12.5px">'
+         +(p.hang?p.hang+'/'+p.siso:'—')+'</td></tr>';
+  });
+  return '<div class="kh"><h3>📈 Tiến bộ qua các tháng</h3>'
+   +'<div style="margin-bottom:10px">'+mui+'</div>'
+   +'<svg viewBox="0 0 100 100" preserveAspectRatio="none" '
+   +'style="width:100%;height:118px;background:#fafbfd;border:1px solid #e3e9f0;'
+   +'border-radius:9px;padding:0">'
+   +'<line x1="0" y1="'+ty((y0+y1)/2).toFixed(1)+'" x2="100" y2="'+ty((y0+y1)/2).toFixed(1)
+   +'" stroke="#e3e9f0" stroke-width=".6" stroke-dasharray="2 2"/>'
+   +(dTb?'<path d="'+dTb+'" fill="none" stroke="#8d9bad" stroke-width="1.4" '
+   +'stroke-dasharray="3 2" vector-effect="non-scaling-stroke"/>':'')
+   +'<path d="'+dCon+'" fill="none" stroke="#152a4e" stroke-width="2.4" '
+   +'vector-effect="non-scaling-stroke" stroke-linejoin="round"/>'+cham+'</svg>'
+   +'<div style="display:flex;justify-content:space-between;font-size:10px;'
+   +'color:#8d9bad;margin-top:3px"><span>thang điểm '+sg(y0)+' – '+sg(y1)+'</span></div>'
+   +'<div style="display:flex;margin-top:2px">'+nhan+'</div>'
+   +'<div style="font-size:11px;color:#8d9bad;margin-top:7px">'
+   +'<b style="color:#152a4e">──</b> điểm của con &nbsp;&nbsp;'
+   +'<b style="color:#8d9bad">- -</b> trung bình lớp</div>'
+   +'<table style="width:100%;margin-top:11px;border-collapse:collapse;font-size:12.5px">'
+   +'<thead><tr style="background:#f4f6fa">'
+   +'<th style="text-align:left;padding:6px 4px;font-size:10.5px;color:#5a6b80;'
+   +'background:none;letter-spacing:.4px">THÁNG</th>'
+   +'<th style="padding:6px 4px;font-size:10.5px;color:#5a6b80;background:none">CON</th>'
+   +'<th style="padding:6px 4px;font-size:10.5px;color:#5a6b80;background:none">TB LỚP</th>'
+   +'<th style="padding:6px 4px;font-size:10.5px;color:#5a6b80;background:none">HẠNG</th>'
+   +'</tr></thead><tbody>'+bang+'</tbody></table></div>';
+}
+
+/* ---- 2. BIEU DO COT 4 DIEM KIEM TRA ---- */
+function veKT(h){
+  var ds=(h.kt||[]).filter(function(x){return x!=null;});
+  if(!ds.length) return '';
+  var cot='',nhan='';
+  (h.kt||[]).forEach(function(v,i){
+    if(v==null){
+      cot+='<div class="c"><div class="sv" style="color:#8d9bad">—</div>'
+          +'<div class="th" style="height:3px;background:#e3e9f0"></div></div>';
+    }else{
+      var cls = v>=9?' cao':(v<6.5?' thap':'');
+      cot+='<div class="c'+cls+'"><div class="sv">'+sg(v)+'</div>'
+          +'<div class="th" style="height:'+Math.max(6,(v/10)*100)+'%"></div></div>';
+    }
+    nhan+='<span>Bài '+(i+1)+'</span>';
+  });
+  return '<div class="kh"><h3>📝 Điểm kiểm tra trên lớp</h3>'
+   +'<div class="cot">'+cot+'</div><div class="cot-nhan">'+nhan+'</div>'
+   +'<div style="font-size:11.5px;color:#8d9bad;margin-top:8px">'
+   +'Trung bình <b style="color:#152a4e">'+sv(h.tbkt)+'</b></div></div>';
+}
+
+/* ---- 2B. BAI TAP VE NHA AZOTA (thay yeu cau nhan manh 08/09) ---- */
+function veBaiTap(h){
+  if(!h.btct || !h.btct.length){
+    if(h.btd==null) return '';
+  }
+  var lam=0, tong=(h.btct||[]).length, cot='', nhan='';
+  (h.btct||[]).forEach(function(x,i){
+    var ten=x[0], v=x[1];
+    if(v==null){
+      /* Con CHUA LAM de nay. Phai THAY DUOC - cot cao 6% lan vao nen,
+         em khong lam bai nao thi bieu do trong tron, phu huynh tuong hong. */
+      cot+='<div class="c"><div class="sv" style="color:#b6c0cd;font-weight:700">–</div>'
+          +'<div class="th" style="height:14%;background:repeating-linear-gradient('
+          +'45deg,#e8edf4,#e8edf4 3px,#f6f8fb 3px,#f6f8fb 6px);'
+          +'border:1px dashed #cfd8e3"></div></div>';
+    }else{
+      lam++;
+      var cls = v>=9?' cao':(v<6.5?' thap':'');
+      cot+='<div class="c'+cls+'"><div class="sv">'+sg(v)+'</div>'
+          +'<div class="th" style="height:'+Math.max(6,(v/10)*100)+'%"></div></div>';
+    }
+    /* nhan phai la SO DE THAT, khong phai chi so vong lap */
+    nhan+='<span>'+esc(String(ten).replace(/^(Đề\s*Số|Đề|Bài)\s*/i,''))+'</span>';
+  });
+  var tom='';
+  if(h.btd!=null){
+    tom='<div class="bt-tom">'
+      +'<div><span class="l">Đã làm</span><span class="v">'+esc(h.btl||'—')
+      +(h.btt!=null?' <b>('+Math.round(h.btt)+'%)</b>':'')+'</span></div>'
+      +'<div><span class="l">Điểm TB bài đã làm</span><span class="v">'+sv(h.bttb)+'</span></div>'
+      +'<div><span class="l">Điểm bài tập</span><span class="v" style="color:'
+      +(h.btd>=8?'#1b8a5a':(h.btd<5?'#c0392b':'#152a4e'))+'">'+sv(h.btd)+'</span></div>'
+      +'</div>';
+  }
+  var loi='';
+  if(h.btd===0)
+    loi='<div class="warn" style="margin-top:9px;margin-bottom:0">'
+      +'Tháng này con <b>chưa làm bài tập nào</b> trên Azota nên phần điểm bài tập '
+      +'của con bằng 0. Bố mẹ nhắc con làm bài đều hơn giúp thầy cô nhé.</div>';
+  else if(h.btt!=null && h.btt<50)
+    loi='<div class="warn" style="margin-top:9px;margin-bottom:0">'
+      +'Con mới làm <b>'+esc(h.btl)+'</b> bài. Các bài con làm đạt <b>'+sv(h.bttb)
+      +'</b> điểm — con làm được, chỉ cần làm <b>đều hơn</b>.</div>';
+  var giai='<div style="font-size:11.5px;color:#8d9bad;margin-top:8px">'
+      +'Điểm bài tập = điểm trung bình các bài đã làm × tỉ lệ số bài làm. '
+      +'Cột mờ có dấu – là bài con <b>chưa làm</b>.</div>';
+  return '<div class="kh"><h3>📚 Bài tập về nhà trên Azota</h3>'
+   +tom
+   +(tong? '<div class="cot">'+cot+'</div><div class="cot-nhan">'+nhan+'</div>'+giai : '')
+   +loi+'</div>';
+}
+
+/* ---- 3. LICH DI HOC ---- */
+function veLich(h){
+  if(!h.ngay || !h.ngay.length) return '';
+  var o='';
+  h.ngay.forEach(function(d,i){
+    var v=h.buoi[i];
+    /* 01/10/2026: truoc chi hieu 'O' la vang -> 'P'/'K' (so diem danh tu T8)
+       hien thanh o XAM '·' = "chua vao lop", phu huynh khong thay buoi vang. */
+    var vg = (v==='O'||v==='K'||v==='P');
+    var cls = v==='X'?'co':(vg?'vang':'chua');
+    var ic  = v==='X'?'✓':(v==='P'?'P':(vg?'✗':'·'));
+    o+='<div class="bu '+cls+'"><div class="d">'+esc(d)+'</div>'+ic+'</div>';
+  });
+  var tom='<b style="color:#152a4e">'+h.comat+'/'+h.mauso+' buổi</b>'
+        +(h.cc!=null?' ('+h.cc+'%)':'');
+  var them='';
+  if(h.gop) them='<div style="font-size:11.5px;color:#8d9bad;margin-top:7px">'
+   +'Con '+esc(h.dalop||'học 2 lớp')+' — dải ô trên là lịch của <b>lớp này</b>, '
+   +'còn tỉ lệ '+tom+' là tổng hợp <b>cả hai lớp</b>.</div>';
+  var vang='';
+  if(h.nv && h.nv.length) vang='<div class="warn" style="margin-top:9px;margin-bottom:0">'
+   +'<b>Buổi con vắng:</b> '+esc(h.nv.join(', '))+'</div>';
+  return '<div class="kh"><h3>📅 Lịch đi học trong tháng</h3>'
+   +'<div class="lich">'+o+'</div>'
+   +'<div style="font-size:12.5px;color:#5a6b80;margin-top:9px">Đi học '+tom+'</div>'
+   +them+vang+'</div>';
+}
+
+/* ---- 4. VI TRI TRONG LOP ---- */
+function veViTri(h){
+  if(!h.vt) return '';
+  var v=h.vt, tbx = (v.max>v.min)? ((v.tb-v.min)/(v.max-v.min))*100 : 50;
+  return '<div class="kh"><h3>🎯 Vị trí trong lớp</h3>'
+   +'<div class="vt"><div class="day"></div>'
+   +'<div class="tb" style="left:'+tbx.toFixed(1)+'%"></div>'
+   +'<div class="con" style="left:'+v.pct+'%"></div></div>'
+   +'<div class="vt-nhan"><span>thấp nhất lớp '+sg(v.min)+'</span>'
+   +'<span>cao nhất lớp '+sg(v.max)+'</span></div>'
+   +'<div style="font-size:12.5px;color:#5a6b80;margin-top:9px">'
+   +'Điểm thi của con <b style="color:#152a4e">'+sv(h.thi)+'</b>'+(h.bu?' (thi bù)':'')
+   +(h.hang?' — xếp thứ <b style="color:#152a4e">'+h.hang+'/'+h.siso+'</b> lớp':'')
+   +'. Vạch xám là điểm trung bình lớp ('+sv(v.tb)+').</div></div>';
+}
+
+function mo(i){
+  var h=HS[i]; if(!h) return;
+  document.getElementById('dnm').textContent=h.ten;
+  document.getElementById('dmt').textContent=
+    /* em chua co diem thi: xl = null -> truoc in chu "null" duoi ten (T9) */
+    (h.hang?'Hạng '+h.hang+'/'+h.siso+' của lớp · ':'')+(h.xl||'Chưa có điểm thi tháng này');
+  /* Chi hien o NAO CO SO THAT. O toan dau gach ngang lam phu huynh tuong hong. */
+  var o=[];
+  if(h.thi!=null) o.push([h.bu?'Điểm thi (thi bù)':'Điểm thi',sv(h.thi)]);
+  if(!h.chi_thi && h.tbkt!=null) o.push(['TB kiểm tra',sv(h.tbkt)]);
+  if(h.cc!=null) o.push(['Chuyên cần',h.comat+'/'+h.mauso+' ('+h.cc+'%)']);
+  if(h.xh!=null) o.push(['Điểm xếp hạng',sv(h.xh)]);
+  document.getElementById('dds').innerHTML=o.map(function(x){
+    return '<div><div class="l">'+esc(x[0])+'</div><div class="v">'+esc(x[1])+'</div></div>';
+  }).join('');
+  document.getElementById('ddb').innerHTML=
+    veTienBo(h)+veBaiTap(h)+veKT(h)+veLich(h)+veViTri(h)
+    +'<div class="kh"><h3>💬 Nhận xét của thầy cô</h3>'
+    +'<div class="nxbox">'+esc(h.nx)+'</div></div>';
+  ov.classList.add('on');
+  document.body.style.overflow='hidden';
+  ov.scrollTop=0;
+  var noi=ov.querySelector('.noi'); if(noi) noi.scrollTop=0;
+}
+function dong(){ov.classList.remove('on');document.body.style.overflow='';}
+document.addEventListener('click',function(ev){
+  var t=ev.target.closest?ev.target.closest('.nx'):null;
+  if(t){mo(+t.getAttribute('data-i'));return;}
+  if(ev.target===ov||ev.target.id==='dx')dong();
+});
+document.addEventListener('keydown',function(ev){if(ev.key==='Escape')dong();});
+</script>
+</body></html>
